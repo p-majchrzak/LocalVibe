@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocalVibe.Pages.Admin.AdminTabbedPage"
+             xmlns:pages="clr-namespace:LocalVibe.Pages.Admin"
+             Title="AdminTabbedPage">
+    <!--Strony nawigacyjne uzytkownika-->
+    <pages:AnalyticsPage Title="AnalyticsPage" />
+    <pages:ContentModerationPage Title="ContentModerationPage" />
+    <pages:DashboardPage Title="Dashboard" />
+    <pages:UserManagementPage Title="UserManagementPage" />
+
+</TabbedPage>
