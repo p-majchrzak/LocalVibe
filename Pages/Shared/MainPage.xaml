@@ -8,5 +8,6 @@
             Text="Strona glowna jakas przykladowa lub ladowania? Cos wymyslimy"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+            <Button x:Name="Zaloguj" Text="Zaloguj" Clicked="OnZalogujClicked"></Button>
     </VerticalStackLayout>
 </ContentPage>

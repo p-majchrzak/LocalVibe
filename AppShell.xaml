@@ -6,9 +6,14 @@
     xmlns:local="clr-namespace:LocalVibe"
     Title="LocalVibe">
 
+<!--
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:Pages.Shared.MainPage}"
         Route="MainPage" />
-
+-->
+<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:Pages.Shared.MainPage}"
+        Route="MainPage" />
 </Shell>

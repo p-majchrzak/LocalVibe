@@ -7,4 +7,9 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+	
+	private async void OnZalogujClicked(object sender, EventArgs e)
+	{
+		Application.Current!.Windows[0].Page = new User.UserTabbedPage();
+	}
 }
