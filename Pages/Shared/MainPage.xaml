@@ -5,7 +5,7 @@
              Title="MainPage">
     <VerticalStackLayout>
         <Label 
-            Text="Dziala"
+            Text="Strona glowna jakas przykladowa lub ladowania? Cos wymyslimy"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
