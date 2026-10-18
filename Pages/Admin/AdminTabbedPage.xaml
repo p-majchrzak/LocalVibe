@@ -7,9 +7,9 @@
              android:TabbedPage.ToolbarPlacement="Bottom"
              Title="AdminTabbedPage">
     <!--Strony nawigacyjne uzytkownika-->
-    <pages:AnalyticsPage Title="AnalyticsPage" />
-    <pages:ContentModerationPage Title="ContentModerationPage" />
-    <pages:DashboardPage Title="Dashboard" />
-    <pages:UserManagementPage Title="UserManagementPage" />
+    <pages:AnalyticsPage Title="AnalyticsPage" IconImageSource="analytics.png" />
+    <pages:ContentModerationPage Title="ContentModerationPage" IconImageSource="content_moderation.png" />
+    <pages:DashboardPage Title="Dashboard" IconImageSource="dashboard.png" />
+    <pages:UserManagementPage Title="UserManagementPage" IconImageSource="user_management.png" />
 
 </TabbedPage>

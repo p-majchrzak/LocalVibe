@@ -7,10 +7,10 @@
              android:TabbedPage.ToolbarPlacement="Bottom"
              Title="UserTabbedPage">
     <!--Strony nawigacyjne uzytkownika-->
-    <pages:HomePage Title="Strona glowna" />
-    <pages:CameraPage Title="Kamera" />
-    <pages:FeedPage Title="Posty uzytkownikow" />
-    <pages:ProfilPage Title="Profil" />
-    <pages:SettingsPage Title="Ustawienia" />
+    <pages:HomePage Title="Strona glowna" IconImageSource="home.png" />
+    <pages:CameraPage Title="Kamera" IconImageSource="camera.png" />
+    <pages:FeedPage Title="Posty uzytkownikow" IconImageSource="feed.png" />
+    <pages:ProfilPage Title="Profil" IconImageSource="profil.png" />
+    <pages:SettingsPage Title="Ustawienia" IconImageSource="settings.png" />
 
 </TabbedPage>

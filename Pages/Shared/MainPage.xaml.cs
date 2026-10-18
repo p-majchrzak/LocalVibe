@@ -12,4 +12,8 @@ public partial class MainPage : ContentPage
 	{
 		Application.Current!.Windows[0].Page = new User.UserTabbedPage();
 	}
+	private async void OnZalogujAdminClicked(object sender, EventArgs e)
+	{
+		Application.Current!.Windows[0].Page = new Admin.AdminTabbedPage();
+	}
 }
