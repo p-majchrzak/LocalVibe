@@ -5,12 +5,16 @@
              xmlns:pages="clr-namespace:LocalVibe.Pages.User"
              xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
              android:TabbedPage.ToolbarPlacement="Bottom"
+             BarTextColor="#4EB9E6"
+             SelectedTabColor="#4EB9E6"
+             UnselectedTabColor="#4EB9E6"
+             BarBackgroundColor="AliceBlue"
              Title="UserTabbedPage">
     <!--Strony nawigacyjne uzytkownika-->
-    <pages:HomePage Title="Strona glowna" IconImageSource="home.png" />
-    <pages:CameraPage Title="Kamera" IconImageSource="camera.png" />
-    <pages:FeedPage Title="Posty uzytkownikow" IconImageSource="feed.png" />
-    <pages:ProfilPage Title="Profil" IconImageSource="profil.png" />
-    <pages:SettingsPage Title="Ustawienia" IconImageSource="settings.png" />
+    <pages:HomePage Title="" IconImageSource="home.png" />
+    <pages:CameraPage Title="" IconImageSource="camera.png" />
+    <pages:FeedPage Title="" IconImageSource="feed.png" />
+    <pages:ProfilPage Title="" IconImageSource="profil.png" />
+    <pages:SettingsPage Title="" IconImageSource="settings.png" />
 
 </TabbedPage>

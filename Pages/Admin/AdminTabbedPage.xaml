@@ -5,11 +5,15 @@
              xmlns:pages="clr-namespace:LocalVibe.Pages.Admin"
              xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
              android:TabbedPage.ToolbarPlacement="Bottom"
+             BarTextColor="#4EB9E6"
+             SelectedTabColor="#4EB9E6"
+             UnselectedTabColor="#4EB9E6"
+             BarBackgroundColor="AliceBlue"
              Title="AdminTabbedPage">
     <!--Strony nawigacyjne uzytkownika-->
-    <pages:AnalyticsPage Title="AnalyticsPage" IconImageSource="analytics.png" />
-    <pages:ContentModerationPage Title="ContentModerationPage" IconImageSource="content_moderation.png" />
-    <pages:DashboardPage Title="Dashboard" IconImageSource="dashboard.png" />
-    <pages:UserManagementPage Title="UserManagementPage" IconImageSource="user_management.png" />
+    <pages:AnalyticsPage Title="" IconImageSource="analytics.png" />
+    <pages:ContentModerationPage Title="" IconImageSource="content_moderation.png" />
+    <pages:DashboardPage Title="" IconImageSource="dashboard.png" />
+    <pages:UserManagementPage Title="" IconImageSource="user_management.png" />
 
 </TabbedPage>
