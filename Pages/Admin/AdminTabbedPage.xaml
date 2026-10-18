@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Admin.AdminTabbedPage"
              xmlns:pages="clr-namespace:LocalVibe.Pages.Admin"
+             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             android:TabbedPage.ToolbarPlacement="Bottom"
              Title="AdminTabbedPage">
     <!--Strony nawigacyjne uzytkownika-->
     <pages:AnalyticsPage Title="AnalyticsPage" />

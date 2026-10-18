@@ -3,12 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.User.UserTabbedPage"
              xmlns:pages="clr-namespace:LocalVibe.Pages.User"
+             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             android:TabbedPage.ToolbarPlacement="Bottom"
              Title="UserTabbedPage">
     <!--Strony nawigacyjne uzytkownika-->
     <pages:HomePage Title="Strona glowna" />
-    <pages:ProfilPage Title="Profil" />
-    <pages:SettingsPage Title="Ustawienia" />
     <pages:CameraPage Title="Kamera" />
     <pages:FeedPage Title="Posty uzytkownikow" />
+    <pages:ProfilPage Title="Profil" />
+    <pages:SettingsPage Title="Ustawienia" />
 
 </TabbedPage>
