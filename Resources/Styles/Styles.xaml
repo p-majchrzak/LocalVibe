@@ -3,6 +3,63 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+
+<!-- Kolory strony 404 -->
+<Color x:Key="NotFoundBackground">#FFFFFF</Color>
+<Color x:Key="NotFoundPrimary">#4EB9E6</Color>
+<Color x:Key="NotFoundPrimaryLight">#A5E0F9</Color>
+<Color x:Key="NotFoundText">#242424</Color>
+<Color x:Key="NotFoundSecondary">#DFD8F7</Color>
+<Color x:Key="NotFoundMuted">#748094</Color>
+<Color x:Key="NotFoundMagenta">#FF05ADF5</Color>
+
+<!-- Numer 404 -->
+<Style x:Key="NotFoundNumber" TargetType="Label">
+    <Setter Property="FontSize" Value="92" />
+    <Setter Property="FontAttributes" Value="Bold" />
+    <Setter Property="TextColor" Value="{StaticResource NotFoundPrimary}" />
+    <Setter Property="HorizontalTextAlignment" Value="Center" />
+    <Setter Property="HorizontalOptions" Value="Center" />
+</Style>
+
+<!-- Nagłówek -->
+<Style x:Key="NotFoundTitle" TargetType="Label">
+    <Setter Property="FontSize" Value="27" />
+    <Setter Property="FontAttributes" Value="Bold" />
+    <Setter Property="TextColor" Value="{StaticResource NotFoundText}" />
+    <Setter Property="HorizontalTextAlignment" Value="Center" />
+    <Setter Property="HorizontalOptions" Value="Center" />
+</Style>
+
+<!-- Opis -->
+<Style x:Key="NotFoundDescription" TargetType="Label">
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="TextColor" Value="{StaticResource NotFoundMuted}" />
+    <Setter Property="HorizontalTextAlignment" Value="Center" />
+    <Setter Property="HorizontalOptions" Value="Center" />
+    <Setter Property="LineBreakMode" Value="WordWrap" />
+</Style>
+
+<!-- Przycisk -->
+<Style x:Key="NotFoundButton" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource NotFoundPrimary}" />
+    <Setter Property="TextColor" Value="White" />
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="FontAttributes" Value="Bold" />
+    <Setter Property="CornerRadius" Value="28" />
+    <Setter Property="HeightRequest" Value="56" />
+    <Setter Property="Padding" Value="24,0" />
+    <Setter Property="HorizontalOptions" Value="Center" />
+    <Setter Property="MinimumWidthRequest" Value="230" />
+</Style>
+
+<!-- Górny pasek -->
+<Style x:Key="NotFoundHeader" TargetType="Grid">
+    <Setter Property="BackgroundColor" Value="{StaticResource NotFoundPrimary}" />
+    <Setter Property="Padding" Value="22,12" />
+</Style>
+
+
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
     </Style>

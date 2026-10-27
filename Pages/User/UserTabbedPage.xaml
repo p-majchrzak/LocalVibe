@@ -10,6 +10,7 @@
              UnselectedTabColor="#4EB9E6"
              BarBackgroundColor="AliceBlue"
              Title="UserTabbedPage">
+             
     <!--Strony nawigacyjne uzytkownika-->
     <pages:HomePage Title="" IconImageSource="home.png" />
     <pages:CameraPage Title="" IconImageSource="camera.png" />

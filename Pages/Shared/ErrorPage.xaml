@@ -3,10 +3,162 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Shared.ErrorPage"
              Title="ErrorPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Strona do bledow"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    
+<Grid
+    BackgroundColor="{StaticResource NotFoundBackground}"
+    RowDefinitions="Auto,*,Auto">
+
+    <!-- Główna zawartość -->
+    <ScrollView Grid.Row="1">
+        <Grid Padding="24,24,24,28">
+
+            <!-- Dekoracje -->
+            <Ellipse
+                WidthRequest="190"
+                HeightRequest="190"
+                Fill="#EAF8FE"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TranslationX="-110"
+                TranslationY="10" />
+
+            <Ellipse
+                WidthRequest="150"
+                HeightRequest="150"
+                Fill="#F0ECFC"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                TranslationX="85"
+                TranslationY="40" />
+
+            <VerticalStackLayout
+                Spacing="20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                MaximumWidthRequest="480">
+
+                <!-- Ilustracja 404 -->
+                <Grid HeightRequest="210">
+
+                    <Ellipse
+                        WidthRequest="230"
+                        HeightRequest="115"
+                        Fill="#EEF8FD"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        Margin="0,0,0,12" />
+
+                    <Label
+                        Text="✦"
+                        FontSize="32"
+                        TextColor="{StaticResource NotFoundSecondary}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="25,10,0,0" />
+
+                    <Label
+                        Text="✦"
+                        FontSize="27"
+                        TextColor="{StaticResource NotFoundMagenta}"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Margin="0,35,30,0" />
+
+                    <Label
+                        Text="404"
+                        Style="{StaticResource NotFoundNumber}"
+                        VerticalOptions="Center"
+                        Margin="0,-15,0,0" />
+
+                    <!-- Symbol zagubionej strony -->
+                    <Border
+                        WidthRequest="76"
+                        HeightRequest="76"
+                        Padding="0"
+                        BackgroundColor="White"
+                        Stroke="#D8F0FB"
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 25"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        TranslationY="-5">
+
+                        <Label
+                            Text="?"
+                            FontSize="43"
+                            FontAttributes="Bold"
+                            TextColor="{StaticResource NotFoundPrimary}"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center" />
+                    </Border>
+                </Grid>
+
+                <!-- Tytuł -->
+                <Label
+                    Text="Ups! Zgubiliśmy tę stronę"
+                    Style="{StaticResource NotFoundTitle}" />
+
+                <!-- Opis -->
+                <Label
+                    Text="Wygląda na to, że strona, której szukasz, nie istnieje lub została przeniesiona."
+                    Style="{StaticResource NotFoundDescription}"
+                    Margin="8,0" />
+
+                <!-- Powrót -->
+                <Button
+                    Text="⌂   Wróć do strony głównej"
+                    Style="{StaticResource NotFoundButton}"
+                    Clicked="OnHomeClicked"
+                    Margin="0,10,0,0" />
+
+                <!-- Dodatkowa informacja -->
+                <Label
+                    Text="Nie martw się, znajdziemy właściwe miejsce."
+                    FontSize="12"
+                    TextColor="{StaticResource NotFoundMuted}"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,2,0,0" />
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+    <!-- Stopka -->
+    <Grid
+        Grid.Row="2"
+        Padding="16,12"
+        BackgroundColor="#F8FCFE">
+
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="7">
+
+            <Label
+                Text="♥"
+                FontSize="15"
+                TextColor="{StaticResource NotFoundMagenta}"
+                VerticalOptions="Center" />
+
+            <Label
+                Text="LocalVibe"
+                FontSize="12"
+                TextColor="{StaticResource NotFoundMuted}"
+                VerticalOptions="Center" />
+
+            <Label
+                Text="•"
+                FontSize="12"
+                TextColor="{StaticResource NotFoundMuted}"
+                VerticalOptions="Center" />
+
+            <Label
+                Text="Znajdź swoje miejsce"
+                FontSize="12"
+                TextColor="{StaticResource NotFoundMuted}"
+                VerticalOptions="Center" />
+
+        </HorizontalStackLayout>
+    </Grid>
+
+</Grid>
 </ContentPage>

@@ -16,4 +16,9 @@ public partial class MainPage : ContentPage
 	{
 		Application.Current!.Windows[0].Page = new Admin.AdminTabbedPage();
 	}
+
+    private void ZalogujB_Clicked(object sender, EventArgs e)
+	{
+		Application.Current!.Windows[0].Page = new Shared.ErrorPage();
+	}
 }
