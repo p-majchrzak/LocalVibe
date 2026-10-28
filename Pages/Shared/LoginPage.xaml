@@ -3,10 +3,216 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Shared.LoginPage"
              Title="LoginPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Strona logowania"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+     <Grid BackgroundColor="#F7FAFC">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="28,36,28,28"
+            Spacing="0">
+
+            <!-- LOGO -->
+            <Grid
+                ColumnDefinitions="52,*"
+                ColumnSpacing="12"
+                HorizontalOptions="Center"
+                Margin="0,10,0,42">
+
+                <Border
+                    Grid.Column="0"
+                    BackgroundColor="#4EB9E6"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 17"
+                    HeightRequest="52"
+                    WidthRequest="52">
+                    <Label
+                        Text="L"
+                        FontSize="30"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                </Border>
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    Spacing="1"
+                    VerticalOptions="Center">
+                    <Label
+                        Text="LocalVibe"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#187BA8"/>
+                    <Label
+                        Text="Poczuj klimat swojego miejsca"
+                        FontSize="11"
+                        TextColor="#8293A1"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- NAGŁÓWEK -->
+            <Label
+                Text="Dobrze Cię widzieć!"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#202D38"
+                LineBreakMode="WordWrap"/>
+
+            <Label
+                Text="Zaloguj się i sprawdź, jaki klimat panuje dziś wokół Ciebie."
+                FontSize="14"
+                TextColor="#71808D"
+                LineHeight="1.4"
+                Margin="0,10,0,30"/>
+
+            <!-- FORMULARZ -->
+            <VerticalStackLayout Spacing="9">
+                <Label
+                    Text="Adres e-mail"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#344653"/>
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DCE7EE"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 14"
+                    Padding="15,2">
+                    <Entry
+                        x:Name="EmailEntry"
+                        Placeholder="np. jan@email.com"
+                        Keyboard="Email"
+                        TextColor="#202D38"
+                        PlaceholderColor="#A0ADB7"
+                        BackgroundColor="Transparent"
+                        ClearButtonVisibility="WhileEditing"
+                        HeightRequest="49"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="9" Margin="0,20,0,0">
+                <Label
+                    Text="Hasło"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#344653"/>
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DCE7EE"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 14"
+                    Padding="15,2">
+                    <Entry
+                        x:Name="PasswordEntry"
+                        Placeholder="Wpisz swoje hasło"
+                        IsPassword="True"
+                        TextColor="#202D38"
+                        PlaceholderColor="#A0ADB7"
+                        BackgroundColor="Transparent"
+                        HeightRequest="49"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- PRZYPOMNIENIE HASŁA -->
+            <Label
+                Text="Nie pamiętasz hasła?"
+                FontSize="13"
+                TextColor="#187BA8"
+                HorizontalOptions="End"
+                Margin="0,14,2,26">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnForgotPasswordClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!-- LOGOWANIE -->
+            <Button
+                Text="Zaloguj się"
+                Clicked="OnLoginClicked"
+                BackgroundColor="#4EB9E6"
+                TextColor="White"
+                FontSize="16"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                HeightRequest="54"
+                Padding="16,0"/>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="5"
+                Margin="0,27,0,0">
+                <Label
+                    Text="Nie masz jeszcze konta?"
+                    FontSize="13"
+                    TextColor="#71808D"
+                    VerticalOptions="Center"/>
+                <Label
+                    Text="Zarejestruj się"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#187BA8"
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnRegisterClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+            <!-- MOTYW APLIKACJI -->
+            <Border
+                BackgroundColor="#EAF7FD"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 18"
+                Padding="17"
+                Margin="0,36,0,0">
+
+                <Grid
+                    ColumnDefinitions="44,*"
+                    ColumnSpacing="12">
+
+                    <Border
+                        BackgroundColor="White"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 13"
+                        HeightRequest="44"
+                        WidthRequest="44">
+                        <Label
+                            Text="☀"
+                            FontSize="25"
+                            TextColor="#187BA8"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                    </Border>
+
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        Spacing="4"
+                        VerticalOptions="Center">
+                        <Label
+                            Text="Twój dzień. Twoja pogoda."
+                            FontSize="13"
+                            FontAttributes="Bold"
+                            TextColor="#187BA8"/>
+                        <Label
+                            Text="Odkrywaj codzienność uchwyconą przez innych."
+                            FontSize="12"
+                            TextColor="#647D8B"
+                            LineBreakMode="WordWrap"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <Label
+                Text="LOCALVIBE  ·  ODKRYWAJ SWÓJ KLIMAT"
+                FontSize="9"
+                CharacterSpacing="1.5"
+                TextColor="#A0ADB7"
+                HorizontalOptions="Center"
+                Margin="0,28,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</Grid>
 </ContentPage>

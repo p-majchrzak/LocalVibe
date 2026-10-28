@@ -3,10 +3,255 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Shared.RegisterPage"
              Title="RegisterPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Strona rejestracji"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+     <Grid BackgroundColor="#F7FAFC">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="28,26,28,28"
+            Spacing="0">
+
+            <!-- LOGO -->
+            <Grid
+                ColumnDefinitions="52,*"
+                ColumnSpacing="12"
+                HorizontalOptions="Center"
+                Margin="0,4,0,30">
+
+                <Border
+                    Grid.Column="0"
+                    BackgroundColor="#4EB9E6"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 17"
+                    HeightRequest="52"
+                    WidthRequest="52">
+                    <Label
+                        Text="L"
+                        FontSize="30"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                </Border>
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    Spacing="1"
+                    VerticalOptions="Center">
+                    <Label
+                        Text="LocalVibe"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#187BA8"/>
+                    <Label
+                        Text="Poczuj klimat swojego miejsca"
+                        FontSize="11"
+                        TextColor="#8293A1"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- NAGŁÓWEK -->
+            <Label
+                Text="Dołącz do LocalVibe"
+                FontSize="29"
+                FontAttributes="Bold"
+                TextColor="#202D38"
+                LineBreakMode="WordWrap"/>
+
+            <Label
+                Text="Twórz wspomnienia, dziel się chwilami i odkrywaj świat przez pogodę."
+                FontSize="14"
+                TextColor="#71808D"
+                Margin="0,9,0,24"
+                LineBreakMode="WordWrap"/>
+
+            <!-- NAZWA UŻYTKOWNIKA -->
+            <VerticalStackLayout Spacing="8">
+                <Label
+                    Text="Nazwa użytkownika"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#344653"/>
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DCE7EE"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 14"
+                    Padding="15,2">
+                    <Entry
+                        x:Name="UsernameEntry"
+                        Placeholder="Jak mamy Cię nazywać?"
+                        TextColor="#202D38"
+                        PlaceholderColor="#A0ADB7"
+                        BackgroundColor="Transparent"
+                        HeightRequest="48"
+                        MaxLength="30"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- E-MAIL -->
+            <VerticalStackLayout Spacing="8" Margin="0,16,0,0">
+                <Label
+                    Text="Adres e-mail"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#344653"/>
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DCE7EE"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 14"
+                    Padding="15,2">
+                    <Entry
+                        x:Name="EmailEntry"
+                        Placeholder="np. jan@email.com"
+                        Keyboard="Email"
+                        TextColor="#202D38"
+                        PlaceholderColor="#A0ADB7"
+                        BackgroundColor="Transparent"
+                        ClearButtonVisibility="WhileEditing"
+                        HeightRequest="48"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- HASŁO -->
+            <VerticalStackLayout Spacing="8" Margin="0,16,0,0">
+                <Label
+                    Text="Hasło"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#344653"/>
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DCE7EE"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 14"
+                    Padding="15,2">
+                    <Entry
+                        x:Name="PasswordEntry"
+                        Placeholder="Utwórz hasło"
+                        IsPassword="True"
+                        TextColor="#202D38"
+                        PlaceholderColor="#A0ADB7"
+                        BackgroundColor="Transparent"
+                        HeightRequest="48"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- POWTÓRZ HASŁO -->
+            <VerticalStackLayout Spacing="8" Margin="0,16,0,0">
+                <Label
+                    Text="Powtórz hasło"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#344653"/>
+
+                <Border
+                    BackgroundColor="White"
+                    Stroke="#DCE7EE"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 14"
+                    Padding="15,2">
+                    <Entry
+                        x:Name="ConfirmPasswordEntry"
+                        Placeholder="Wpisz hasło ponownie"
+                        IsPassword="True"
+                        TextColor="#202D38"
+                        PlaceholderColor="#A0ADB7"
+                        BackgroundColor="Transparent"
+                        HeightRequest="48"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- ZGODA -->
+            <Grid
+                ColumnDefinitions="Auto,*"
+                ColumnSpacing="8"
+                Margin="0,20,0,22"
+                HorizontalOptions="Fill">
+
+                <CheckBox
+                    x:Name="TermsCheckBox"
+                    Grid.Column="0"
+                    Color="#4EB9E6"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Margin="-6,0,0,0"/>
+
+                <Label
+                    Grid.Column="1"
+                    FontSize="12"
+                    TextColor="#71808D"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Fill"
+                    LineBreakMode="WordWrap">
+
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Akceptuję "/>
+                            <Span
+                                Text="politykę prywatności"
+                                TextColor="#187BA8"
+                                FontAttributes="Bold"/>
+                            <Span Text=" i zasady korzystania z aplikacji."/>
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnPrivacyPolicyClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+
+            <!-- PRZYCISK REJESTRACJI -->
+            <Button
+                Text="Utwórz konto"
+                Clicked="OnRegisterClicked"
+                BackgroundColor="#4EB9E6"
+                TextColor="White"
+                FontSize="16"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                HeightRequest="54"
+                Padding="16,0"/>
+
+            <!-- PRZEJŚCIE DO LOGOWANIA -->
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="5"
+                Margin="0,24,0,0">
+
+                <Label
+                    Text="Masz już konto?"
+                    FontSize="13"
+                    TextColor="#71808D"
+                    VerticalOptions="Center"/>
+
+                <Label
+                    Text="Zaloguj się"
+                    FontSize="13"
+                    FontAttributes="Bold"
+                    TextColor="#187BA8"
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnLoginClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+            <!-- STOPKA -->
+            <Label
+                Text="LOCALVIBE  ·  ODKRYWAJ SWÓJ KLIMAT"
+                FontSize="9"
+                CharacterSpacing="1.5"
+                TextColor="#A0ADB7"
+                HorizontalOptions="Center"
+                Margin="0,30,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</Grid>
 </ContentPage>

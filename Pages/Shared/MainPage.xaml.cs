@@ -19,6 +19,6 @@ public partial class MainPage : ContentPage
 
     private void ZalogujB_Clicked(object sender, EventArgs e)
 	{
-		Application.Current!.Windows[0].Page = new Shared.PrivacyPolicyPage();
+		Application.Current!.Windows[0].Page = new Shared.RegisterPage();
 	}
 }
