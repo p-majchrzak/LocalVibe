@@ -7,24 +7,26 @@ public partial class LoginPage : ContentPage
         InitializeComponent();
     }
 
+    private void OnBackClicked(object sender, TappedEventArgs e)
+    {
+        Application.Current!.Windows[0].Page =
+            new LocalVibe.Pages.Shared.MainPage();
+    }
+
     private async void OnLoginClicked(object sender, EventArgs e)
     {
-        await DisplayAlert(
-            "LocalVibe",
-            "Logowanie zostanie dodane na późniejszym etapie projektu.",
-            "OK");
+        Application.Current!.Windows[0].Page =
+            new LocalVibe.Pages.Shared.LoginPage();
     }
 
-    private async void OnForgotPasswordClicked(object sender, TappedEventArgs e)
+    private void OnRegisterClicked(object sender, EventArgs e)
     {
-        await DisplayAlert(
-            "Przypomnienie hasła",
-            "Funkcja odzyskiwania hasła zostanie dodana później.",
-            "OK");
+        Application.Current!.Windows[0].Page =
+            new LocalVibe.Pages.Shared.RegisterPage();
     }
 
-    private async void OnRegisterClicked(object sender, TappedEventArgs e)
+    private async void OnForgotPasswordClicked(object sender,TappedEventArgs e)
     {
-        Application.Current!.Windows[0].Page = new Shared.RegisterPage();
+        //rozbudowac
     }
 }

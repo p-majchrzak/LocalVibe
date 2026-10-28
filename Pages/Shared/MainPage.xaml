@@ -2,15 +2,545 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Shared.MainPage"
-             Title="MainPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Strona glowna jakas przykladowa lub ladowania? Cos wymyslimy"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-            <Button x:Name="Zaloguj" Text="Zaloguj jako user" Clicked="OnZalogujClicked"></Button>
-            <Button x:Name="ZalogujA" Text="Zaloguj jako admin" Clicked="OnZalogujAdminClicked"></Button>
-            <Button x:Name="ZalogujB" Text="Testy stron" Clicked="ZalogujB_Clicked"></Button>
+             Title="MainPage"  Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F8FF">
 
-    </VerticalStackLayout>
+    <Grid>
+        <!-- TŁO -->
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#E4F5FF" Offset="0.0"/>
+                    <GradientStop Color="#F7F8FF" Offset="0.55"/>
+                    <GradientStop Color="#F0EBFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <!-- DEKORACJE -->
+        <Border WidthRequest="240"
+                HeightRequest="240"
+                BackgroundColor="#35A5E0F9"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 120"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                TranslationX="115"
+                TranslationY="-105"/>
+
+        <Border WidthRequest="150"
+                HeightRequest="150"
+                BackgroundColor="#20B9A5F5"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 75"
+                HorizontalOptions="Start"
+                VerticalOptions="End"
+                TranslationX="-85"
+                TranslationY="70"/>
+
+        <ScrollView>
+            <VerticalStackLayout Padding="22,20,22,30"
+                                 Spacing="25">
+
+                <!-- LOGO I NAGŁÓWEK -->
+                <Grid ColumnDefinitions="Auto,*"
+                      ColumnSpacing="12">
+
+                    <Border BackgroundColor="#FFFFFF"
+                            Stroke="#DCEBFA"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 18"
+                            WidthRequest="54"
+                            HeightRequest="54">
+
+                        <Border.Shadow>
+                            <Shadow Brush="#183C75A5"
+                                    Offset="0,4"
+                                    Radius="12"
+                                    Opacity="0.10"/>
+                        </Border.Shadow>
+
+                        <Grid>
+                            <Label Text="☀"
+                                   FontSize="31"
+                                   TextColor="#F7B94C"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TranslationX="-5"
+                                   TranslationY="-4"/>
+
+                            <Label Text="☁"
+                                   FontSize="25"
+                                   TextColor="#39A9E8"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TranslationX="7"
+                                   TranslationY="8"/>
+                        </Grid>
+                    </Border>
+
+                    <VerticalStackLayout Grid.Column="1"
+                                         Spacing="2"
+                                         VerticalOptions="Center">
+
+                        <Label Text="LocalVibe"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               CharacterSpacing="-0.5"
+                               TextColor="#20374D"/>
+
+                        <Label Text="YOUR DAY. YOUR WEATHER."
+                               FontSize="9"
+                               CharacterSpacing="1.7"
+                               FontAttributes="Bold"
+                               TextColor="#6F8AA5"/>
+                    </VerticalStackLayout>
+                </Grid>
+
+                <!-- GŁÓWNA SEKCJA -->
+                <Border StrokeThickness="0"
+                        StrokeShape="RoundRectangle 32"
+                        Padding="23">
+
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0"
+                                             EndPoint="1,1">
+                            <GradientStop Color="#187BA8" Offset="0.0"/>
+                            <GradientStop Color="#278FD1" Offset="0.55"/>
+                            <GradientStop Color="#6B83E8" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Border.Shadow>
+                        <Shadow Brush="#426C9FDB"
+                                Offset="0,12"
+                                Radius="22"
+                                Opacity="0.22"/>
+                    </Border.Shadow>
+
+                    <VerticalStackLayout Spacing="17">
+
+                        <!-- PILL -->
+                        <Border BackgroundColor="#27FFFFFF"
+                                Stroke="#50FFFFFF"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 20"
+                                Padding="11,7"
+                                HorizontalOptions="Start">
+
+                            <HorizontalStackLayout Spacing="7">
+                                <Label Text="✦"
+                                       FontSize="12"
+                                       TextColor="#FFE5A3"
+                                       VerticalOptions="Center"/>
+
+                                <Label Text="POCZUJ CHWILĘ"
+                                       FontSize="10"
+                                       FontAttributes="Bold"
+                                       CharacterSpacing="1.2"
+                                       TextColor="#FFFFFF"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Border>
+
+                        <Label Text="Każdy dzień&#10;ma swoją&#10;pogodę."
+                               FontSize="39"
+                               FontAttributes="Bold"
+                               CharacterSpacing="-1"
+                               TextColor="#FFFFFF"
+                               LineHeight="1.0"/>
+
+                        <Label Text="Zatrzymaj moment. Podziel się swoim światem. Odkrywaj codzienność innych przez zdjęcia i pogodę."
+                               FontSize="14"
+                               TextColor="#EAF6FF"
+                               LineHeight="1.35"/>
+
+                        <!-- ILUSTRACJA POGODOWA -->
+                        <Grid HeightRequest="180">
+
+                            <Border BackgroundColor="#20FFFFFF"
+                                    Stroke="#35FFFFFF"
+                                    StrokeThickness="1"
+                                    StrokeShape="RoundRectangle 26"
+                                    HorizontalOptions="Fill"
+                                    VerticalOptions="Fill"/>
+
+                            <Border WidthRequest="135"
+                                    HeightRequest="135"
+                                    BackgroundColor="#18FFFFFF"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 68"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"/>
+
+                            <Label Text="☀"
+                                   FontSize="93"
+                                   TextColor="#FFE6A1"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TranslationX="-14"
+                                   TranslationY="-9"/>
+
+                            <Label Text="☁"
+                                   FontSize="75"
+                                   TextColor="#FFFFFF"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TranslationX="36"
+                                   TranslationY="31"/>
+
+                            <Border BackgroundColor="#F8FFFFFF"
+                                    Stroke="#65FFFFFF"
+                                    StrokeThickness="1"
+                                    StrokeShape="RoundRectangle 15"
+                                    Padding="10,7"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"
+                                    Margin="12">
+
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="✦"
+                                           FontSize="11"
+                                           TextColor="#E8B34B"/>
+
+                                    <Label Text="YOUR MOMENT"
+                                           FontSize="9"
+                                           FontAttributes="Bold"
+                                           TextColor="#287CA9"/>
+                                </HorizontalStackLayout>
+                            </Border>
+
+                            <Border BackgroundColor="#32FFFFFF"
+                                    Stroke="#55FFFFFF"
+                                    StrokeThickness="1"
+                                    StrokeShape="RoundRectangle 15"
+                                    Padding="10,7"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="End"
+                                    Margin="12">
+
+                                <Label Text="☁  FEEL THE DAY"
+                                       FontSize="9"
+                                       FontAttributes="Bold"
+                                       TextColor="#FFFFFF"/>
+                            </Border>
+                        </Grid>
+
+                        <Label Text="Twoja codzienność. Twoja historia."
+                               FontSize="12"
+                               FontAttributes="Italic"
+                               TextColor="#E5F4FF"
+                               HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+ <!-- PRZYCISKI -->
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Zacznij swoją przygodę"
+                           FontSize="21"
+                           FontAttributes="Bold"
+                           TextColor="#20374D"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Dołącz do LocalVibe i twórz własną historię."
+                           FontSize="13"
+                           TextColor="#8192A5"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,0,0,5"/>
+
+                    <Button Text="Zaloguj się  →"
+                            Clicked="OnLoginClicked"
+                            BackgroundColor="#187BA8"
+                            TextColor="#FFFFFF"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            CornerRadius="17"
+                            HeightRequest="57">
+
+                        <Button.Shadow>
+                            <Shadow Brush="#40187BA8"
+                                    Offset="0,6"
+                                    Radius="13"
+                                    Opacity="0.20"/>
+                        </Button.Shadow>
+                    </Button>
+
+                    <Button Text="Utwórz konto"
+                            Clicked="OnRegisterClicked"
+                            BackgroundColor="#FFFFFF"
+                            TextColor="#187BA8"
+                            BorderColor="#CFE6F6"
+                            BorderWidth="1.5"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            CornerRadius="17"
+                            HeightRequest="55"/>
+                </VerticalStackLayout>
+                <!-- TYTUŁ FUNKCJI -->
+                <VerticalStackLayout Spacing="6">
+
+                    <Label Text="Więcej niż zdjęcie."
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           CharacterSpacing="-0.5"
+                           TextColor="#20374D"/>
+
+                    <Label Text="Odkrywaj chwile, które tworzą każdy dzień."
+                           FontSize="13"
+                           TextColor="#8294A8"/>
+                </VerticalStackLayout>
+
+                <!-- KARTY FUNKCJI -->
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="Auto,Auto"
+                      ColumnSpacing="12"
+                      RowSpacing="12">
+
+                    <!-- KARTA 1 -->
+                    <Border BackgroundColor="#FFFFFF"
+                            Stroke="#E1EAF5"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 23"
+                            Padding="15">
+
+                        <Border.Shadow>
+                            <Shadow Brush="#153E6799"
+                                    Offset="0,5"
+                                    Radius="13"
+                                    Opacity="0.06"/>
+                        </Border.Shadow>
+
+                        <VerticalStackLayout Spacing="11">
+
+                            <Border BackgroundColor="#FFF1D8"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 16"
+                                    WidthRequest="52"
+                                    HeightRequest="52"
+                                    HorizontalOptions="Start">
+
+                                <Label Text="📸"
+                                       FontSize="26"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Border>
+
+                            <Label Text="Twoje chwile"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   TextColor="#20374D"/>
+
+                            <Label Text="Uwieczniaj codzienność na własnych zasadach."
+                                   FontSize="12"
+                                   TextColor="#8192A5"
+                                   LineHeight="1.25"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <!-- KARTA 2 -->
+                    <Border Grid.Column="1"
+                            BackgroundColor="#FFFFFF"
+                            Stroke="#E1EAF5"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 23"
+                            Padding="15">
+
+                        <Border.Shadow>
+                            <Shadow Brush="#153E6799"
+                                    Offset="0,5"
+                                    Radius="13"
+                                    Opacity="0.06"/>
+                        </Border.Shadow>
+
+                        <VerticalStackLayout Spacing="11">
+
+                            <Border BackgroundColor="#DFF4FF"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 16"
+                                    WidthRequest="52"
+                                    HeightRequest="52"
+                                    HorizontalOptions="Start">
+
+                                <Label Text="🌦️"
+                                       FontSize="26"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Border>
+
+                            <Label Text="Pogoda"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   TextColor="#20374D"/>
+
+                            <Label Text="Łącz wspomnienia z atmosferą danego dnia."
+                                   FontSize="12"
+                                   TextColor="#8192A5"
+                                   LineHeight="1.25"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <!-- KARTA 3 -->
+                    <Border Grid.Row="1"
+                            BackgroundColor="#FFFFFF"
+                            Stroke="#E1EAF5"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 23"
+                            Padding="15">
+
+                        <Border.Shadow>
+                            <Shadow Brush="#153E6799"
+                                    Offset="0,5"
+                                    Radius="13"
+                                    Opacity="0.06"/>
+                        </Border.Shadow>
+
+                        <VerticalStackLayout Spacing="11">
+
+                            <Border BackgroundColor="#EDE5FF"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 16"
+                                    WidthRequest="52"
+                                    HeightRequest="52"
+                                    HorizontalOptions="Start">
+
+                                <Label Text="🌍"
+                                       FontSize="26"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Border>
+
+                            <Label Text="Odkrywaj"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   TextColor="#20374D"/>
+
+                            <Label Text="Poznawaj codzienność z różnych miejsc."
+                                   FontSize="12"
+                                   TextColor="#8192A5"
+                                   LineHeight="1.25"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <!-- KARTA 4 -->
+                    <Border Grid.Row="1"
+                            Grid.Column="1"
+                            BackgroundColor="#FFFFFF"
+                            Stroke="#E1EAF5"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 23"
+                            Padding="15">
+
+                        <Border.Shadow>
+                            <Shadow Brush="#153E6799"
+                                    Offset="0,5"
+                                    Radius="13"
+                                    Opacity="0.06"/>
+                        </Border.Shadow>
+
+                        <VerticalStackLayout Spacing="11">
+
+                            <Border BackgroundColor="#DDF8EE"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 16"
+                                    WidthRequest="52"
+                                    HeightRequest="52"
+                                    HorizontalOptions="Start">
+
+                                <Label Text="💙"
+                                       FontSize="26"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Border>
+
+                            <Label Text="Społeczność"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   TextColor="#20374D"/>
+
+                            <Label Text="Dziel się chwilami i poznawaj innych."
+                                   FontSize="12"
+                                   TextColor="#8192A5"
+                                   LineHeight="1.25"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <!-- SEKCJA POWITALNA -->
+                <Border BackgroundColor="#FFFFFF"
+                        Stroke="#DFEAF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 25"
+                        Padding="20">
+
+                    <Grid ColumnDefinitions="*,Auto"
+                          ColumnSpacing="10">
+
+                        <VerticalStackLayout Spacing="6"
+                                             VerticalOptions="Center">
+
+                            <Label Text="Świat wygląda inaczej każdego dnia."
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#20374D"
+                                   LineHeight="1.2"/>
+
+                            <Label Text="Zobacz go z perspektywy LocalVibe."
+                                   FontSize="12"
+                                   TextColor="#8192A5"/>
+                        </VerticalStackLayout>
+
+                        <Border Grid.Column="1"
+                                BackgroundColor="#E6F5FF"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 17"
+                                WidthRequest="56"
+                                HeightRequest="56"
+                                VerticalOptions="Center">
+
+                            <Label Text="✨"
+                                   FontSize="28"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+
+                <!-- STOPKA -->
+                <VerticalStackLayout Spacing="8"
+                                     HorizontalOptions="Center">
+
+                    <HorizontalStackLayout Spacing="6"
+                                           HorizontalOptions="Center">
+
+                        <Label Text="☀"
+                               FontSize="14"
+                               TextColor="#F2B74E"/>
+
+                        <Label Text="LocalVibe"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="#5C7893"/>
+
+                        <Label Text="☁"
+                               FontSize="14"
+                               TextColor="#39A9E8"/>
+                    </HorizontalStackLayout>
+
+                    <Label Text="TWOJE CHWILE. TWOJA POGODA. TWÓJ ŚWIAT."
+                           FontSize="9"
+                           CharacterSpacing="1.1"
+                           TextColor="#9AAABD"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="© LocalVibe"
+                           FontSize="11"
+                           TextColor="#A2B0C0"
+                           HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
