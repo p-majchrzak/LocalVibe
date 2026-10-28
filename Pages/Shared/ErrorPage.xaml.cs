@@ -1,81 +1,39 @@
-using LocalVibe;
-
 namespace LocalVibe.Pages.Shared;
 
 public partial class ErrorPage : ContentPage
 {
+    private readonly Action? _retryAction;
+
     public ErrorPage()
     {
         InitializeComponent();
     }
 
-    private async void OnBackClicked(object sender, EventArgs e)
+    public ErrorPage(string errorMessage, Action? retryAction = null)
     {
-        try
+        InitializeComponent();
+
+        ErrorMessageLabel.Text = string.IsNullOrWhiteSpace(errorMessage)
+            ? "Wystąpił nieoczekiwany błąd. Spróbuj ponownie za chwilę."
+            : errorMessage;
+
+        _retryAction = retryAction;
+    }
+
+    private void OnRetryClicked(object sender, EventArgs e)
+    {
+        if (_retryAction is not null)
         {
-            if (Shell.Current is not null)
-            {
-                if (Shell.Current.Navigation.NavigationStack.Count > 1)
-                {
-                    await Shell.Current.Navigation.PopAsync();
-                    return;
-                }
-
-                if (Shell.Current.Navigation.ModalStack.Count > 0)
-                {
-                    await Shell.Current.Navigation.PopModalAsync();
-                    return;
-                }
-
-                await GoHomeAsync();
-                return;
-            }
-
-            if (Navigation.NavigationStack.Count > 1)
-            {
-                await Navigation.PopAsync();
-            }
-            else if (Navigation.ModalStack.Count > 0)
-            {
-                await Navigation.PopModalAsync();
-            }
-            else
-            {
-                await GoHomeAsync();
-            }
+            _retryAction.Invoke();
         }
-        catch (Exception ex)
+        else
         {
-            System.Diagnostics.Debug.WriteLine(
-                $"Błąd powrotu: {ex.Message}");
+            Application.Current!.Windows[0].Page = new MainPage();
         }
     }
 
-    private async void OnHomeClicked(object sender, EventArgs e)
+    private void OnHomeClicked(object sender, EventArgs e)
     {
-        await GoHomeAsync();
-    }
-
-    private async Task GoHomeAsync()
-    {
-        try
-        {
-            if (Shell.Current is not null)
-            {
-                await Shell.Current.GoToAsync("//HomePage");
-                return;
-            }
-
-            if (Application.Current?.Windows.FirstOrDefault()
-                is Window window)
-            {
-                window.Page = new AppShell();
-            }
-        }
-        catch (Exception ex)
-        {
-            System.Diagnostics.Debug.WriteLine(
-                $"Błąd nawigacji do strony głównej: {ex.Message}");
-        }
+        Application.Current!.Windows[0].Page = new MainPage();
     }
 }

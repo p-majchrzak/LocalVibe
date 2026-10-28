@@ -2,15 +2,200 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Shared.MainPage"
-             Title="MainPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Strona glowna jakas przykladowa lub ladowania? Cos wymyslimy"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-            <Button x:Name="Zaloguj" Text="Zaloguj jako user" Clicked="OnZalogujClicked"></Button>
-            <Button x:Name="ZalogujA" Text="Zaloguj jako admin" Clicked="OnZalogujAdminClicked"></Button>
-            <Button x:Name="ZalogujB" Text="Error404" Clicked="ZalogujB_Clicked"></Button>
+             Title="MainPage"  Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F8FF">
 
-    </VerticalStackLayout>
+    <ContentPage.Resources>
+
+        <LinearGradientBrush x:Key="BrandGradient"
+                             StartPoint="0,0"
+                             EndPoint="1,1">
+            <GradientStop Color="#187BA8" Offset="0.0" />
+            <GradientStop Color="#4EB9E6" Offset="1.0" />
+        </LinearGradientBrush>
+
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#187BA8" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="CornerRadius" Value="18" />
+            <Setter Property="HeightRequest" Value="58" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+        </Style>
+
+        <Style x:Key="SecondaryButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="TextColor" Value="#187BA8" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="CornerRadius" Value="18" />
+            <Setter Property="HeightRequest" Value="56" />
+            <Setter Property="BorderColor" Value="#DDEBF5" />
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+        </Style>
+
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,*,Auto"
+          Padding="20,0,20,10"
+          RowSpacing="0">
+
+    <!-- LOGO I NAZWA -->
+    <Grid Grid.Row="0"
+        HorizontalOptions="Fill"
+        Padding="0,20,0,10">
+
+    <VerticalStackLayout
+        Spacing="4"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <Label
+            Text="LocalVibe"
+            FontSize="23"
+            FontAttributes="Bold"
+            CharacterSpacing="-0.7"
+            TextColor="#187BA8"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="YOUR WORLD, YOUR VIBE"
+            FontSize="9"
+            CharacterSpacing="1.8"
+            TextColor="#73869A"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+
+        </Grid>
+
+        <!-- GŁÓWNA TREŚĆ -->
+        <VerticalStackLayout
+            Grid.Row="1"
+            Spacing="0"
+            VerticalOptions="Center">
+
+            <!-- CENTRALNE LOGO -->
+            <Grid
+                HeightRequest="230"
+                Margin="0,0,0,18">
+
+                <Ellipse
+                    WidthRequest="220"
+                    HeightRequest="220"
+                    Fill="#A5E0F9"
+                    Opacity="0.22"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+                <Ellipse
+                    WidthRequest="175"
+                    HeightRequest="175"
+                    Fill="White"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+                <Image
+                    Source="appicon.png"
+                    WidthRequest="160"
+                    HeightRequest="160"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+
+            </Grid>
+
+            <!-- NAGŁÓWEK -->
+            <Label
+                Text="Twój świat."
+                FontSize="42"
+                FontAttributes="Bold"
+                CharacterSpacing="-1.6"
+                TextColor="#192D45"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Twój klimat."
+                FontSize="42"
+                FontAttributes="Bold"
+                CharacterSpacing="-1.6"
+                TextColor="#4EB9E6"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Uchwyć codzienne chwile, dziel się swoim światem i odkrywaj miejsca oczami innych."
+                FontSize="15"
+                LineHeight="1.45"
+                TextColor="#73869A"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                MaximumWidthRequest="320"
+                Margin="10,17,10,0" />
+
+            <!-- KRÓTKIE HASŁO -->
+            <Border
+                BackgroundColor="#E4F5FD"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 20"
+                Padding="14,10"
+                HorizontalOptions="Center"
+                Margin="0,25,0,0">
+
+                <HorizontalStackLayout Spacing="8">
+                    <Label
+                        Text="✦"
+                        FontSize="14"
+                        TextColor="#187BA8"
+                        VerticalOptions="Center" />
+
+                    <Label
+                        Text="MOMENTS, NOT PERFECTION"
+                        FontSize="9"
+                        FontAttributes="Bold"
+                        CharacterSpacing="1.2"
+                        TextColor="#187BA8"
+                        VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+            </Border>
+
+        </VerticalStackLayout>
+
+        <!-- PRZYCISKI -->
+        <Border
+            Grid.Row="2"
+            BackgroundColor="White"
+            Stroke="#E4EEF7"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 26"
+            Padding="17">
+
+            <VerticalStackLayout Spacing="11">
+
+                <Button
+                    Text="Utwórz konto  →"
+                    Style="{StaticResource PrimaryButton}"
+                    Clicked="OnRegisterClicked" />
+
+                <Button
+                    Text="Zaloguj się"
+                    Style="{StaticResource SecondaryButton}"
+                    Clicked="OnLoginClicked" />
+
+                <Label
+                    Text="Twoje chwile czekają na odkrycie."
+                    FontSize="11"
+                    TextColor="#8CA1B4"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,3,0,0" />
+
+            </VerticalStackLayout>
+        </Border>
+
+    </Grid>
 </ContentPage>

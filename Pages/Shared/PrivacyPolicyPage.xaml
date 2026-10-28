@@ -2,11 +2,326 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Shared.PrivacyPolicyPage"
-             Title="PrivacyPolicyPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Polityka prywatnosci"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Polityka prywatności"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F8FF">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- NAGŁÓWEK -->
+        <Grid Grid.Row="0"
+              ColumnDefinitions="Auto,*"
+              Padding="20,18"
+              ColumnSpacing="12">
+
+            <Button Text="←"
+                    Grid.Column="0"
+                    FontSize="24"
+                    TextColor="#187BA8"
+                    BackgroundColor="White"
+                    BorderColor="#DDEBF5"
+                    BorderWidth="1"
+                    CornerRadius="16"
+                    WidthRequest="48"
+                    HeightRequest="48"
+                    Padding="0"
+                    Clicked="OnBackClicked" />
+
+            <VerticalStackLayout Grid.Column="1"
+                                 Spacing="3"
+                                 VerticalOptions="Center">
+
+                <Label Text="LocalVibe"
+                       FontSize="23"
+                       FontAttributes="Bold"
+                       CharacterSpacing="-0.7"
+                       TextColor="#187BA8" />
+
+                <Label Text="TWOJA PRYWATNOŚĆ"
+                       FontSize="9"
+                       CharacterSpacing="1.5"
+                       TextColor="#73869A" />
+            </VerticalStackLayout>
+        </Grid>
+
+        <!-- TREŚĆ -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="22,12,22,25"
+                                 Spacing="16">
+
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 24"
+                        Padding="22">
+
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label Text="Polityka prywatności"
+                               FontSize="29"
+                               FontAttributes="Bold"
+                               CharacterSpacing="-0.8"
+                               TextColor="#192D45" />
+
+                        <Label Text="LocalVibe · Zasady ochrony danych"
+                               FontSize="13"
+                               TextColor="#73869A" />
+
+                        <BoxView HeightRequest="3"
+                                 WidthRequest="55"
+                                 Color="#4EB9E6"
+                                 HorizontalOptions="Start"
+                                 Margin="0,5,0,5" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#52677B"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 1 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="01"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Postanowienia ogólne"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 2 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="02"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Administrator danych"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 3 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="03"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Zakres zbieranych danych"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 4 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="04"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Cel i podstawa przetwarzania"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 5 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="05"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Przechowywanie i bezpieczeństwo danych"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 6 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="06"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Prawa użytkownika"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 7 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="07"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Pliki cookies i technologie"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- SEKCJA 8 -->
+                <Border BackgroundColor="White"
+                        Stroke="#DDEBF5"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="9">
+                        <Label Text="08"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="#4EB9E6" />
+
+                        <Label Text="Zmiany polityki prywatności"
+                               FontSize="19"
+                               FontAttributes="Bold"
+                               TextColor="#192D45" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#73869A"
+                               LineHeight="1.4" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- KONTAKT -->
+                <Border BackgroundColor="#E4F5FD"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="20">
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Masz pytania?"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="#187BA8" />
+
+                        <Label Text="Kontakt w sprawach prywatności"
+                               FontSize="13"
+                               TextColor="#52677B" />
+
+                        <Label Text="tekst"
+                               FontSize="14"
+                               TextColor="#52677B" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- STOPKA -->
+        <Border Grid.Row="2"
+                BackgroundColor="White"
+                Stroke="#DDEBF5"
+                StrokeThickness="1"
+                Padding="18,10">
+
+            <Button Text="← Wróć"
+                    BackgroundColor="#187BA8"
+                    TextColor="White"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    CornerRadius="16"
+                    HeightRequest="50"
+                    Clicked="OnBackClicked" />
+        </Border>
+
+    </Grid>
 </ContentPage>
