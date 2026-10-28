@@ -10,7 +10,7 @@
             HorizontalOptions="Center" />
             <Button x:Name="Zaloguj" Text="Zaloguj jako user" Clicked="OnZalogujClicked"></Button>
             <Button x:Name="ZalogujA" Text="Zaloguj jako admin" Clicked="OnZalogujAdminClicked"></Button>
-            <Button x:Name="ZalogujB" Text="Error404" Clicked="ZalogujB_Clicked"></Button>
+            <Button x:Name="ZalogujB" Text="Testy stron" Clicked="ZalogujB_Clicked"></Button>
 
     </VerticalStackLayout>
 </ContentPage>
