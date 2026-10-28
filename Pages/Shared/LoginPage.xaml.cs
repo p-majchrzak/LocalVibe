@@ -7,26 +7,22 @@ public partial class LoginPage : ContentPage
         InitializeComponent();
     }
 
-    private void OnBackClicked(object sender, TappedEventArgs e)
-    {
-        Application.Current!.Windows[0].Page =
-            new LocalVibe.Pages.Shared.MainPage();
-    }
-
     private async void OnLoginClicked(object sender, EventArgs e)
     {
-        Application.Current!.Windows[0].Page =
-            new LocalVibe.Pages.Shared.LoginPage();
+         Application.Current!.Windows[0].Page = new ErrorPage();
     }
 
-    private void OnRegisterClicked(object sender, EventArgs e)
+    private void OnRegisterTapped(object sender, TappedEventArgs e)
     {
-        Application.Current!.Windows[0].Page =
-            new LocalVibe.Pages.Shared.RegisterPage();
+        Application.Current!.Windows[0].Page = new RegisterPage();
     }
 
-    private async void OnForgotPasswordClicked(object sender,TappedEventArgs e)
+    private async void OnForgotPasswordTapped(object sender,TappedEventArgs e)
     {
-        //rozbudowac
+         Application.Current!.Windows[0].Page = new ErrorPage();
+    }
+    private void OnBackToHomeClicked(object sender, EventArgs e)
+    {
+        Application.Current!.Windows[0].Page = new MainPage();
     }
 }

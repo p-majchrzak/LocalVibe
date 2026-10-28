@@ -1,3 +1,4 @@
+
 namespace LocalVibe.Pages.Shared;
 
 public partial class MainPage : ContentPage
@@ -7,15 +8,15 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    private void OnLoginClicked(object sender, EventArgs e)
-    {
-        Application.Current!.Windows[0].Page =
-            new LocalVibe.Pages.Shared.LoginPage();
-    }
-
     private void OnRegisterClicked(object sender, EventArgs e)
     {
         Application.Current!.Windows[0].Page =
-            new LocalVibe.Pages.Shared.RegisterPage();
+            new RegisterPage();
+    }
+
+    private void OnLoginClicked(object sender, EventArgs e)
+    {
+        Application.Current!.Windows[0].Page =
+            new LoginPage();
     }
 }

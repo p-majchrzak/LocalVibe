@@ -2,163 +2,130 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LocalVibe.Pages.Shared.ErrorPage"
-             Title="ErrorPage">
-    
-<Grid
-    BackgroundColor="{StaticResource NotFoundBackground}"
-    RowDefinitions="Auto,*,Auto">
+             Title="Wystąpił błąd"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F8FF">
 
-    <!-- Główna zawartość -->
-    <ScrollView Grid.Row="1">
-        <Grid Padding="24,24,24,28">
+    <Grid Padding="25"
+          RowDefinitions="Auto,*,Auto">
 
-            <!-- Dekoracje -->
-            <Ellipse
-                WidthRequest="190"
-                HeightRequest="190"
-                Fill="#EAF8FE"
-                HorizontalOptions="Start"
-                VerticalOptions="Start"
-                TranslationX="-110"
-                TranslationY="10" />
+        <!-- LOGO -->
+        <VerticalStackLayout Grid.Row="0"
+                             Spacing="4"
+                             HorizontalOptions="Center">
 
-            <Ellipse
-                WidthRequest="150"
-                HeightRequest="150"
-                Fill="#F0ECFC"
-                HorizontalOptions="End"
-                VerticalOptions="End"
-                TranslationX="85"
-                TranslationY="40" />
+            <Image Source="appicon.png"
+                   WidthRequest="55"
+                   HeightRequest="55"
+                   Aspect="AspectFit" />
 
-            <VerticalStackLayout
-                Spacing="20"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                MaximumWidthRequest="480">
+            <Label Text="LocalVibe"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   CharacterSpacing="-0.7"
+                   TextColor="#187BA8"
+                   HorizontalTextAlignment="Center" />
 
-                <!-- Ilustracja 404 -->
-                <Grid HeightRequest="210">
+            <Label Text="YOUR WORLD, YOUR VIBE"
+                   FontSize="9"
+                   CharacterSpacing="1.8"
+                   TextColor="#73869A"
+                   HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
 
-                    <Ellipse
-                        WidthRequest="230"
-                        HeightRequest="115"
-                        Fill="#EEF8FD"
-                        HorizontalOptions="Center"
-                        VerticalOptions="End"
-                        Margin="0,0,0,12" />
+        <!-- KOMUNIKAT -->
+        <VerticalStackLayout Grid.Row="1"
+                             Spacing="17"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
 
-                    <Label
-                        Text="✦"
-                        FontSize="32"
-                        TextColor="{StaticResource NotFoundSecondary}"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Start"
-                        Margin="25,10,0,0" />
+            <!-- IKONA BŁĘDU -->
+            <Grid WidthRequest="150"
+                  HeightRequest="150"
+                  HorizontalOptions="Center">
 
-                    <Label
-                        Text="✦"
-                        FontSize="27"
-                        TextColor="{StaticResource NotFoundMagenta}"
-                        HorizontalOptions="End"
-                        VerticalOptions="Start"
-                        Margin="0,35,30,0" />
+                <Ellipse WidthRequest="145"
+                         HeightRequest="145"
+                         Fill="#A5E0F9"
+                         Opacity="0.25"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" />
 
-                    <Label
-                        Text="404"
-                        Style="{StaticResource NotFoundNumber}"
-                        VerticalOptions="Center"
-                        Margin="0,-15,0,0" />
+                <Ellipse WidthRequest="108"
+                         HeightRequest="108"
+                         Fill="White"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" />
 
-                    <!-- Symbol zagubionej strony -->
-                    <Border
-                        WidthRequest="76"
+                <Border WidthRequest="76"
                         HeightRequest="76"
-                        Padding="0"
-                        BackgroundColor="White"
-                        Stroke="#D8F0FB"
-                        StrokeThickness="3"
-                        StrokeShape="RoundRectangle 25"
+                        BackgroundColor="#E4F5FD"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 24"
                         HorizontalOptions="Center"
-                        VerticalOptions="End"
-                        TranslationY="-5">
+                        VerticalOptions="Center">
 
-                        <Label
-                            Text="?"
-                            FontSize="43"
-                            FontAttributes="Bold"
-                            TextColor="{StaticResource NotFoundPrimary}"
-                            HorizontalTextAlignment="Center"
-                            VerticalTextAlignment="Center" />
-                    </Border>
-                </Grid>
+                    <Label Text="!"
+                           FontSize="49"
+                           FontAttributes="Bold"
+                           TextColor="#187BA8"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                </Border>
+            </Grid>
 
-                <!-- Tytuł -->
-                <Label
-                    Text="Ups! Zgubiliśmy tę stronę"
-                    Style="{StaticResource NotFoundTitle}" />
+            <Label Text="Ups! Coś poszło nie tak"
+                   FontSize="27"
+                   FontAttributes="Bold"
+                   CharacterSpacing="-0.8"
+                   TextColor="#192D45"
+                   HorizontalTextAlignment="Center" />
 
-                <!-- Opis -->
-                <Label
-                    Text="Wygląda na to, że strona, której szukasz, nie istnieje lub została przeniesiona."
-                    Style="{StaticResource NotFoundDescription}"
-                    Margin="8,0" />
+            <Label x:Name="ErrorMessageLabel"
+                   Text="Wystąpił nieoczekiwany błąd. Spróbuj ponownie za chwilę."
+                   FontSize="14"
+                   TextColor="#73869A"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   MaximumWidthRequest="320"
+                   LineHeight="1.4" />
 
-                <!-- Powrót -->
-                <Button
-                    Text="⌂   Wróć do strony głównej"
-                    Style="{StaticResource NotFoundButton}"
-                    Clicked="OnHomeClicked"
-                    Margin="0,10,0,0" />
+            <!-- PONÓW -->
+            <Button Text="Spróbuj ponownie  ↻"
+                    BackgroundColor="#187BA8"
+                    TextColor="White"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    CornerRadius="17"
+                    HeightRequest="56"
+                    HorizontalOptions="Fill"
+                    Margin="0,12,0,0"
+                    Clicked="OnRetryClicked" />
 
-                <!-- Dodatkowa informacja -->
-                <Label
-                    Text="Nie martw się, znajdziemy właściwe miejsce."
-                    FontSize="12"
-                    TextColor="{StaticResource NotFoundMuted}"
-                    HorizontalTextAlignment="Center"
-                    Margin="0,2,0,0" />
+            <!-- STRONA GŁÓWNA -->
+            <Button Text="← Wróć na stronę główną"
+                    BackgroundColor="White"
+                    TextColor="#187BA8"
+                    BorderColor="#DDEBF5"
+                    BorderWidth="1"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    CornerRadius="17"
+                    HeightRequest="54"
+                    HorizontalOptions="Fill"
+                    Clicked="OnHomeClicked" />
 
-            </VerticalStackLayout>
-        </Grid>
-    </ScrollView>
+        </VerticalStackLayout>
 
-    <!-- Stopka -->
-    <Grid
-        Grid.Row="2"
-        Padding="16,12"
-        BackgroundColor="#F8FCFE">
+        <!-- STOPKA -->
+        <Label Grid.Row="2"
+               Text="Twoje chwile czekają na odkrycie. ✦"
+               FontSize="11"
+               TextColor="#8CA1B4"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="Center"
+               Margin="0,15,0,0" />
 
-        <HorizontalStackLayout
-            HorizontalOptions="Center"
-            Spacing="7">
-
-            <Label
-                Text="♥"
-                FontSize="15"
-                TextColor="{StaticResource NotFoundMagenta}"
-                VerticalOptions="Center" />
-
-            <Label
-                Text="LocalVibe"
-                FontSize="12"
-                TextColor="{StaticResource NotFoundMuted}"
-                VerticalOptions="Center" />
-
-            <Label
-                Text="•"
-                FontSize="12"
-                TextColor="{StaticResource NotFoundMuted}"
-                VerticalOptions="Center" />
-
-            <Label
-                Text="Znajdź swoje miejsce"
-                FontSize="12"
-                TextColor="{StaticResource NotFoundMuted}"
-                VerticalOptions="Center" />
-
-        </HorizontalStackLayout>
     </Grid>
-
-</Grid>
 </ContentPage>
