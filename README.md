@@ -45,7 +45,7 @@ dotnet restore
 
 - Piotr Majchrzak
 - Damian Kiełbasa
-- Kamil Kwiczał
+- Kamil Kwiczal
 
 ## Licencja
 
