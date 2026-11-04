@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LocalVibe.Pages.Admin.AdminTabbedPage"
-             xmlns:pages="clr-namespace:LocalVibe.Pages.Admin"
-             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
-             android:TabbedPage.ToolbarPlacement="Bottom"
-             BarTextColor="#4EB9E6"
-             SelectedTabColor="#4EB9E6"
-             UnselectedTabColor="#4EB9E6"
-             BarBackgroundColor="AliceBlue"
-             Title="AdminTabbedPage">
-    <!--Strony nawigacyjne uzytkownika-->
-    <pages:AnalyticsPage Title="" IconImageSource="analytics.png" />
-    <pages:ContentModerationPage Title="" IconImageSource="content_moderation.png" />
-    <pages:DashboardPage Title="" IconImageSource="dashboard.png" />
-    <pages:UserManagementPage Title="" IconImageSource="user_management.png" />
-
+<TabbedPage
+xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:pages="clr-namespace:LocalVibe.Pages.Admin"
+xmlns:android="clrnamespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=
+Microsoft.Maui.Controls"
+x:Class="LocalVibe.Pages.Admin.AdminTabbedPage"
+android:TabbedPage.ToolbarPlacement="Bottom"
+BarBackgroundColor="#FFFFFF"
+BarTextColor="#187BA8"
+SelectedTabColor="#187BA8"
+UnselectedTabColor="#8CA1B4"
+Title="LocalVibe Admin">
+	<!-- Panel administratora -->
+	<pages:DashboardPage
+	Title="Dashboard"
+	IconImageSource="dashboard.png" />
+	<pages:AnalyticsPage
+	Title="Analityka"
+	IconImageSource="analytics.png" />
+	<pages:ContentModerationPage
+	Title="Moderacja"
+	IconImageSource="content_moderation.png" />
+	<pages:UserManagementPage
+	Title="Użytkownicy"
+	IconImageSource="user_management.png" />
 </TabbedPage>
