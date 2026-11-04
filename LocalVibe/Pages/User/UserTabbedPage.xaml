@@ -1,21 +1,30 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LocalVibe.Pages.User.UserTabbedPage"
-             xmlns:pages="clr-namespace:LocalVibe.Pages.User"
-             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
-             android:TabbedPage.ToolbarPlacement="Bottom"
-             BarTextColor="#4EB9E6"
-             SelectedTabColor="#4EB9E6"
-             UnselectedTabColor="#4EB9E6"
-             BarBackgroundColor="AliceBlue"
-             Title="UserTabbedPage">
-             
-    <!--Strony nawigacyjne uzytkownika-->
-    <pages:HomePage Title="" IconImageSource="home.png" />
-    <pages:CameraPage Title="" IconImageSource="camera.png" />
-    <pages:FeedPage Title="" IconImageSource="feed.png" />
-    <pages:ProfilPage Title="" IconImageSource="profil.png" />
-    <pages:SettingsPage Title="" IconImageSource="settings.png" />
-
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage
+xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:pages="clr-namespace:LocalVibe.Pages.User"
+xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+x:Class="LocalVibe.Pages.User.UserTabbedPage"
+android:TabbedPage.ToolbarPlacement="Bottom"
+BarBackgroundColor="#FFFFFF"
+BarTextColor="#187BA8"
+SelectedTabColor="#187BA8"
+UnselectedTabColor="#8CA1B4"
+Title="LocalVibe">
+<!-- Strony nawigacyjne użytkownika -->
+<pages:HomePage
+Title="Start"
+IconImageSource="home.png" />
+<pages:CameraPage
+Title="Aparat"
+IconImageSource="camera.png" />
+<pages:FeedPage
+Title="Feed"
+IconImageSource="feed.png" />
+<pages:ProfilPage
+Title="Profil"
+IconImageSource="profil.png" />
+<pages:SettingsPage
+Title="Ustawienia"
+IconImageSource="settings.png" />
 </TabbedPage>
