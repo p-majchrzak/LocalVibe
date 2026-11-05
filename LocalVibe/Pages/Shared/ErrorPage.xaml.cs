@@ -28,12 +28,12 @@ public partial class ErrorPage : ContentPage
         }
         else
         {
-            Application.Current!.Windows[0].Page = new MainPage();
+            Application.Current!.Windows[0].Page = new User.UserTabbedPage();
         }
     }
 
     private void OnHomeClicked(object sender, EventArgs e)
     {
-        Application.Current!.Windows[0].Page = new MainPage();
+        Application.Current!.Windows[0].Page = new Admin.AdminTabbedPage();
     }
 }

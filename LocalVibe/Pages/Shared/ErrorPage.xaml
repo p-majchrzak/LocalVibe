@@ -117,7 +117,6 @@
                     Clicked="OnHomeClicked" />
 
         </VerticalStackLayout>
-
         <!-- STOPKA -->
         <Label Grid.Row="2"
                Text="Twoje chwile czekają na odkrycie. ✦"

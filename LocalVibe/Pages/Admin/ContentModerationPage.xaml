@@ -1,487 +1,487 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="LocalVibe.Pages.Admin.ContentModerationPage"
-BackgroundColor="#F5F8FF"
-Shell.NavBarIsVisible="False"
-NavigationPage.HasNavigationBar="False">
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="LocalVibe.Pages.Admin.ContentModerationPage"
+	BackgroundColor="#F5F8FF"
+	Shell.NavBarIsVisible="False"
+	NavigationPage.HasNavigationBar="False">
 	<ScrollView>
 		<VerticalStackLayout
-		Padding="22,25,22,30"
-		Spacing="22">
+			Padding="22,25,22,30"
+			Spacing="22">
 			<!-- Naglowek -->
 			<Grid ColumnDefinitions="*,Auto">
 				<VerticalStackLayout Spacing="3">
 					<Label Text="localvibe"
-					FontSize="25"
-					FontAttributes="Bold"
-					CharacterSpacing="-0.7"
-					TextColor="#187BA8" />
+						   FontSize="25"
+						   FontAttributes="Bold"
+						   CharacterSpacing="-0.7"
+						   TextColor="#187BA8"/>
 					<Label Text="PANEL ADMINISTRATORA"
-					FontSize="9"
-					CharacterSpacing="2"
-					TextColor="#8CA1B4" />
+						   FontSize="9"
+						   CharacterSpacing="2"
+						   TextColor="#8CA1B4"/>
 				</VerticalStackLayout>
 				<Border Grid.Column="1"
-				BackgroundColor="#E4F5FD"
-				StrokeThickness="0"
-				Padding="12"
-				StrokeShape="RoundRectangle 16"
-				VerticalOptions="Center">
+						BackgroundColor="#E4F5FD"
+						StrokeThickness="0"
+						Padding="12"
+						StrokeShape="RoundRectangle 16"
+						VerticalOptions="Center">
 					<Label Text="🛡️"
-					FontSize="22" />
+						   FontSize="22"/>
 				</Border>
 			</Grid>
 			<!-- Tytul -->
 			<VerticalStackLayout Spacing="6">
 				<Label Text="Moderacja treści."
-				FontSize="29"
-				FontAttributes="Bold"
-				TextColor="#192D45" />
+					   FontSize="29"
+					   FontAttributes="Bold"
+					   TextColor="#192D45"/>
 				<Label Text="Kontroluj zgłoszenia i dbaj o bezpieczeństwo społeczności."
-				FontSize="14"
-				TextColor="#73869A" />
+					   FontSize="14"
+					   TextColor="#73869A"/>
 			</VerticalStackLayout>
 			<!-- Statystyki -->
 			<Grid ColumnDefinitions="*,*"
-			RowDefinitions="Auto,Auto"
-			ColumnSpacing="12"
-			RowSpacing="12">
+				  RowDefinitions="Auto,Auto"
+				  ColumnSpacing="12"
+				  RowSpacing="12">
 				<!-- Wszystkie -->
 				<Border BackgroundColor="White"
-				Stroke="#DDEBF5"
-				StrokeThickness="1"
-				Padding="15"
-				StrokeShape="RoundRectangle 18">
+						Stroke="#DDEBF5"
+						StrokeThickness="1"
+						Padding="15"
+						StrokeShape="RoundRectangle 18">
 					<VerticalStackLayout Spacing="7">
 						<Label Text="WSZYSTKIE"
-						FontSize="10"
-						CharacterSpacing="1.2"
-						TextColor="#8CA1B4" />
+							   FontSize="10"
+							   CharacterSpacing="1.2"
+							   TextColor="#8CA1B4"/>
 						<Label Text="156"
-						FontSize="27"
-						FontAttributes="Bold"
-						TextColor="#187BA8" />
+							   FontSize="27"
+							   FontAttributes="Bold"
+							   TextColor="#187BA8"/>
 						<Label Text="Zgłoszenia łącznie"
-						FontSize="11"
-						TextColor="#73869A" />
+							   FontSize="11"
+							   TextColor="#73869A"/>
 					</VerticalStackLayout>
 				</Border>
 				<!-- Oczekujace -->
 				<Border Grid.Column="1"
-				BackgroundColor="White"
-Stroke="#DDEBF5"
-StrokeThickness="1"
-Padding="15"
-StrokeShape="RoundRectangle 18">
+						BackgroundColor="White"
+						Stroke="#DDEBF5"
+						StrokeThickness="1"
+						Padding="15"
+						StrokeShape="RoundRectangle 18">
 					<VerticalStackLayout Spacing="7">
 						<Label Text="OCZEKUJĄCE"
-						FontSize="10"
-						CharacterSpacing="1.2"
-						TextColor="#8CA1B4" />
+							   FontSize="10"
+							   CharacterSpacing="1.2"
+							   TextColor="#8CA1B4"/>
 						<Label Text="18"
-						FontSize="27"
-						FontAttributes="Bold"
-						TextColor="#D18A50" />
+							   FontSize="27"
+							   FontAttributes="Bold"
+							   TextColor="#D18A50"/>
 						<Label Text="Do sprawdzenia"
-						FontSize="11"
-						TextColor="#73869A" />
+							   FontSize="11"
+							   TextColor="#73869A"/>
 					</VerticalStackLayout>
 				</Border>
 				<!-- Rozwiazane -->
 				<Border Grid.Row="1"
-				BackgroundColor="White"
-				Stroke="#DDEBF5"
-				StrokeThickness="1"
-				Padding="15"
-				StrokeShape="RoundRectangle 18">
+						BackgroundColor="White"
+						Stroke="#DDEBF5"
+						StrokeThickness="1"
+						Padding="15"
+						StrokeShape="RoundRectangle 18">
 					<VerticalStackLayout Spacing="7">
 						<Label Text="ROZWIĄZANE"
-						FontSize="10"
-						CharacterSpacing="1.2"
-						TextColor="#8CA1B4" />
+							   FontSize="10"
+							   CharacterSpacing="1.2"
+							   TextColor="#8CA1B4"/>
 						<Label Text="124"
-						FontSize="27"
-						FontAttributes="Bold"
-						TextColor="#32966A" />
+							   FontSize="27"
+							   FontAttributes="Bold"
+							   TextColor="#32966A"/>
 						<Label Text="Zakończone sprawy"
-						FontSize="11"
-TextColor="#73869A" />
+							   FontSize="11"
+							   TextColor="#73869A"/>
 					</VerticalStackLayout>
 				</Border>
 				<!-- Odrzucone -->
 				<Border Grid.Row="1"
-				Grid.Column="1"
-				BackgroundColor="White"
-				Stroke="#DDEBF5"
-				StrokeThickness="1"
-				Padding="15"
-				StrokeShape="RoundRectangle 18">
+						Grid.Column="1"
+						BackgroundColor="White"
+						Stroke="#DDEBF5"
+						StrokeThickness="1"
+						Padding="15"
+						StrokeShape="RoundRectangle 18">
 					<VerticalStackLayout Spacing="7">
 						<Label Text="ODRZUCONE"
-						FontSize="10"
-						CharacterSpacing="1.2"
-						TextColor="#8CA1B4" />
+							   FontSize="10"
+							   CharacterSpacing="1.2"
+							   TextColor="#8CA1B4"/>
 						<Label Text="14"
-						FontSize="27"
-						FontAttributes="Bold"
-						TextColor="#8972BD" />
+							   FontSize="27"
+							   FontAttributes="Bold"
+							   TextColor="#8972BD"/>
 						<Label Text="Nieuzasadnione"
-						FontSize="11"
-						TextColor="#73869A" />
+							   FontSize="11"
+							   TextColor="#73869A"/>
 					</VerticalStackLayout>
 				</Border>
 			</Grid>
 			<!-- Wyszukiwanie -->
 			<VerticalStackLayout Spacing="10">
 				<Label Text="Zgłoszenia"
-				FontSize="19"
-				FontAttributes="Bold"
-				TextColor="#192D45" />
+					   FontSize="19"
+					   FontAttributes="Bold"
+					   TextColor="#192D45"/>
 				<Border BackgroundColor="White"
-				Stroke="#DDEBF5"
+						Stroke="#DDEBF5"
 						StrokeThickness="1"
-Padding="14,2"
-StrokeShape="RoundRectangle 15">
+						Padding="14,2"
+						StrokeShape="RoundRectangle 15">
 					<Grid ColumnDefinitions="Auto,*"
-					ColumnSpacing="10">
+						  ColumnSpacing="10">
 						<Label Text="⌕"
-						FontSize="25"
-						TextColor="#8CA1B4"
-						VerticalOptions="Center" />
+							   FontSize="25"
+							   TextColor="#8CA1B4"
+							   VerticalOptions="Center"/>
 						<Entry Grid.Column="1"
-						Placeholder="Szukaj zgłoszenia..."
-						PlaceholderColor="#A1B3C3"
-						TextColor="#192D45"
-						FontSize="13"
-						BackgroundColor="Transparent" />
+							   Placeholder="Szukaj zgłoszenia..."
+							   PlaceholderColor="#A1B3C3"
+							   TextColor="#192D45"
+							   FontSize="13"
+							   BackgroundColor="Transparent"/>
 					</Grid>
 				</Border>
 			</VerticalStackLayout>
 			<!-- Filtry -->
 			<ScrollView Orientation="Horizontal"
-			HorizontalScrollBarVisibility="Never">
+						HorizontalScrollBarVisibility="Never">
 				<HorizontalStackLayout Spacing="9">
 					<Border BackgroundColor="#187BA8"
-					StrokeThickness="0"
-					Padding="17,10"
-					StrokeShape="RoundRectangle 13">
+							StrokeThickness="0"
+							Padding="17,10"
+							StrokeShape="RoundRectangle 13">
 						<Label Text="Wszystkie"
-						FontSize="12"
-						FontAttributes="Bold"
-						TextColor="White" />
+							   FontSize="12"
+							   FontAttributes="Bold"
+							   TextColor="White"/>
 					</Border>
 					<Border BackgroundColor="White"
-					Stroke="#DDEBF5"
-					StrokeThickness="1"
-					Padding="17,10"
-					StrokeShape="RoundRectangle 13">
+							Stroke="#DDEBF5"
+							StrokeThickness="1"
+							Padding="17,10"
+							StrokeShape="RoundRectangle 13">
 						<Label Text="Oczekujące"
-	FontSize="12"
-	TextColor="#73869A" />
+							   FontSize="12"
+							   TextColor="#73869A"/>
 					</Border>
 					<Border BackgroundColor="White"
-					Stroke="#DDEBF5"
-					StrokeThickness="1"
-					Padding="17,10"
-					StrokeShape="RoundRectangle 13">
+							Stroke="#DDEBF5"
+							StrokeThickness="1"
+							Padding="17,10"
+							StrokeShape="RoundRectangle 13">
 						<Label Text="Rozwiązane"
-						FontSize="12"
-						TextColor="#73869A" />
+							   FontSize="12"
+							   TextColor="#73869A"/>
 					</Border>
 					<Border BackgroundColor="White"
-					Stroke="#DDEBF5"
-					StrokeThickness="1"
-					Padding="17,10"
-					StrokeShape="RoundRectangle 13">
+							Stroke="#DDEBF5"
+							StrokeThickness="1"
+							Padding="17,10"
+							StrokeShape="RoundRectangle 13">
 						<Label Text="Odrzucone"
-						FontSize="12"
-						TextColor="#73869A" />
+							   FontSize="12"
+							   TextColor="#73869A"/>
 					</Border>
 				</HorizontalStackLayout>
 			</ScrollView>
 			<!-- Zgloszenie 1 -->
 			<Border BackgroundColor="White"
-			Stroke="#DDEBF5"
-			StrokeThickness="1"
-			Padding="15"
-			StrokeShape="RoundRectangle 20">
+					Stroke="#DDEBF5"
+					StrokeThickness="1"
+					Padding="15"
+					StrokeShape="RoundRectangle 20">
 				<VerticalStackLayout Spacing="13">
 					<!-- Naglowek zgloszenia -->
 					<Grid ColumnDefinitions="*,Auto">
 						<VerticalStackLayout Spacing="4">
 							<Label Text="Zgłoszenie #001"
-							FontSize="14"
-						    FontAttributes="Bold"
-TextColor="#192D45" />
+								   FontSize="14"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="Dzisiaj, 10:42"
-							FontSize="11"
-							TextColor="#8CA1B4" />
+								   FontSize="11"
+								   TextColor="#8CA1B4"/>
 						</VerticalStackLayout>
 						<Border Grid.Column="1"
-						BackgroundColor="#FFF1E5"
-						StrokeThickness="0"
-						Padding="10,6"
-						StrokeShape="RoundRectangle 9"
-						VerticalOptions="Center">
+								BackgroundColor="#FFF1E5"
+								StrokeThickness="0"
+								Padding="10,6"
+								StrokeShape="RoundRectangle 9"
+								VerticalOptions="Center">
 							<Label Text="OCZEKUJE"
-							FontSize="9"
-							FontAttributes="Bold"
-							TextColor="#D18A50" />
+								   FontSize="9"
+								   FontAttributes="Bold"
+								   TextColor="#D18A50"/>
 						</Border>
 					</Grid>
 					<BoxView HeightRequest="1"
-					Color="#EAF0F5" />
+							 Color="#EAF0F5"/>
 					<!-- Autor -->
 					<Grid ColumnDefinitions="Auto,*"
-					ColumnSpacing="10">
+						  ColumnSpacing="10">
 						<Border BackgroundColor="#E4F5FD"
-						StrokeThickness="0"
-						StrokeShape="RoundRectangle 20"
-						WidthRequest="42"
-						HeightRequest="42">
+								StrokeThickness="0"
+								StrokeShape="RoundRectangle 20"
+								WidthRequest="42"
+								HeightRequest="42">
 							<Label Text="A"
-							FontSize="18"
-							FontAttributes="Bold"
-							TextColor="#187BA8"
-							HorizontalOptions="Center"
-							VerticalOptions="Center" />
+								   FontSize="18"
+								   FontAttributes="Bold"
+								   TextColor="#187BA8"
+								   HorizontalOptions="Center"
+								   VerticalOptions="Center"/>
 						</Border>
 						<VerticalStackLayout Grid.Column="1"
-Spacing="3"
-VerticalOptions="Center">
+											 Spacing="3"
+											 VerticalOptions="Center">
 							<Label Text="Aleksandra Nowak"
-							FontSize="13"
-							FontAttributes="Bold"
-							TextColor="#192D45" />
+								   FontSize="13"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="aleksandra@example.com"
-							FontSize="11"
-							TextColor="#8CA1B4" />
+								   FontSize="11"
+								   TextColor="#8CA1B4"/>
 						</VerticalStackLayout>
 					</Grid>
 					<!-- Powod -->
 					<Border BackgroundColor="#FFF8F2"
-					StrokeThickness="0"
-					Padding="13"
-					StrokeShape="RoundRectangle 13">
+							StrokeThickness="0"
+							Padding="13"
+							StrokeShape="RoundRectangle 13">
 						<VerticalStackLayout Spacing="5">
 							<Label Text="POWÓD ZGŁOSZENIA"
-							FontSize="9"
-							CharacterSpacing="1"
-							TextColor="#B77C4A" />
+								   FontSize="9"
+								   CharacterSpacing="1"
+								   TextColor="#B77C4A"/>
 							<Label Text="Nieodpowiednia treść"
-							FontSize="13"
-							FontAttributes="Bold"
-							TextColor="#192D45" />
+								   FontSize="13"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="Zgłaszający wskazał, że publikacja może naruszać zasady społeczności."
-							FontSize="11"
-							TextColor="#73869A" />
+								   FontSize="11"
+								   TextColor="#73869A"/>
 						</VerticalStackLayout>
 					</Border>
 					<!-- Podglad publikacji -->
 					<Grid ColumnDefinitions="Auto,*"
-					ColumnSpacing="11">
+						  ColumnSpacing="11">
 						<Border BackgroundColor="#EAF3FA"
 								StrokeThickness="0"
-WidthRequest="76"
-HeightRequest="76"
-StrokeShape="RoundRectangle 13">
+								WidthRequest="76"
+								HeightRequest="76"
+								StrokeShape="RoundRectangle 13">
 							<Label Text="📸"
-							FontSize="29"
-							HorizontalOptions="Center"
-							VerticalOptions="Center" />
+								   FontSize="29"
+								   HorizontalOptions="Center"
+								   VerticalOptions="Center"/>
 						</Border>
 						<VerticalStackLayout Grid.Column="1"
-						Spacing="5"
-						VerticalOptions="Center">
+											 Spacing="5"
+											 VerticalOptions="Center">
 							<Label Text="Zgłoszona publikacja"
-							FontSize="12"
-							FontAttributes="Bold"
-							TextColor="#192D45" />
+								   FontSize="12"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="Post użytkownika Aleksandra"
-							FontSize="11"
-							TextColor="#73869A" />
+								   FontSize="11"
+								   TextColor="#73869A"/>
 							<Label Text="ID publikacji: POST-001"
-							FontSize="10"
-							TextColor="#A1B3C3" />
+								   FontSize="10"
+								   TextColor="#A1B3C3"/>
 						</VerticalStackLayout>
 					</Grid>
 					<BoxView HeightRequest="1"
-					Color="#EAF0F5" />
+							 Color="#EAF0F5"/>
 					<!-- Akcje -->
 					<Button Text="Zobacz post"
-					FontSize="12"
-					FontAttributes="Bold"
-					TextColor="#187BA8"
-					BackgroundColor="#E4F5FD"
-					CornerRadius="11"
-					HeightRequest="43" />
+							FontSize="12"
+							FontAttributes="Bold"
+							TextColor="#187BA8"
+							BackgroundColor="#E4F5FD"
+							CornerRadius="11"
+							HeightRequest="43"/>
 					<Grid ColumnDefinitions="*,*"
 						  ColumnSpacing="10">
 						<Button Text="Usuń treść"
-						FontSize="12"
-						TextColor="White"
-						BackgroundColor="#C96B6B"
-						CornerRadius="11"
-						HeightRequest="43" />
+								FontSize="12"
+								TextColor="White"
+								BackgroundColor="#C96B6B"
+								CornerRadius="11"
+								HeightRequest="43"/>
 						<Button Grid.Column="1"
-						Text="Odrzuć zgłoszenie"
-						FontSize="12"
-						TextColor="#32966A"
-						BackgroundColor="#E7F7EF"
-						CornerRadius="11"
-						HeightRequest="43" />
+								Text="Odrzuć zgłoszenie"
+								FontSize="12"
+								TextColor="#32966A"
+								BackgroundColor="#E7F7EF"
+								CornerRadius="11"
+								HeightRequest="43"/>
 					</Grid>
 				</VerticalStackLayout>
 			</Border>
 			<!-- Zgloszenie 2 -->
 			<Border BackgroundColor="White"
-			Stroke="#DDEBF5"
-			StrokeThickness="1"
-			Padding="15"
-			StrokeShape="RoundRectangle 20">
+					Stroke="#DDEBF5"
+					StrokeThickness="1"
+					Padding="15"
+					StrokeShape="RoundRectangle 20">
 				<VerticalStackLayout Spacing="13">
 					<Grid ColumnDefinitions="*,Auto">
 						<VerticalStackLayout Spacing="4">
 							<Label Text="Zgłoszenie #002"
-							FontSize="14"
-							FontAttributes="Bold"
-							TextColor="#192D45" />
+								   FontSize="14"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="Dzisiaj, 09:18"
-							FontSize="11"
-							TextColor="#8CA1B4" />
+								   FontSize="11"
+								   TextColor="#8CA1B4"/>
 						</VerticalStackLayout>
 						<Border Grid.Column="1"
-BackgroundColor="#FFF1E5"
-StrokeThickness="0"
-Padding="10,6"
-StrokeShape="RoundRectangle 9"
-VerticalOptions="Center">
+								BackgroundColor="#FFF1E5"
+								StrokeThickness="0"
+								Padding="10,6"
+								StrokeShape="RoundRectangle 9"
+								VerticalOptions="Center">
 							<Label Text="OCZEKUJE"
-							FontSize="9"
-							FontAttributes="Bold"
-							TextColor="#D18A50" />
+								   FontSize="9"
+								   FontAttributes="Bold"
+								   TextColor="#D18A50"/>
 						</Border>
 					</Grid>
 					<BoxView HeightRequest="1"
-					Color="#EAF0F5" />
+							 Color="#EAF0F5"/>
 					<Grid ColumnDefinitions="Auto,*"
-					ColumnSpacing="10">
+						  ColumnSpacing="10">
 						<Border BackgroundColor="#F0EAFB"
-						StrokeThickness="0"
-						StrokeShape="RoundRectangle 20"
-						WidthRequest="42"
-						HeightRequest="42">
+								StrokeThickness="0"
+								StrokeShape="RoundRectangle 20"
+								WidthRequest="42"
+								HeightRequest="42">
 							<Label Text="M"
-							FontSize="18"
-							FontAttributes="Bold"
-							TextColor="#8972BD"
-							HorizontalOptions="Center"
-							VerticalOptions="Center" />
+								   FontSize="18"
+								   FontAttributes="Bold"
+								   TextColor="#8972BD"
+								   HorizontalOptions="Center"
+								   VerticalOptions="Center"/>
 						</Border>
 						<VerticalStackLayout Grid.Column="1"
-						Spacing="3"
-						VerticalOptions="Center">
+											 Spacing="3"
+											 VerticalOptions="Center">
 							<Label Text="Michał Kowalski"
-							FontSize="13"
-							FontAttributes="Bold"
-							TextColor="#192D45" />
+								   FontSize="13"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="michal@example.com"
-FontSize="11"
-TextColor="#8CA1B4" />
+								   FontSize="11"
+								   TextColor="#8CA1B4"/>
 						</VerticalStackLayout>
 					</Grid>
 					<Border BackgroundColor="#FFF8F2"
-					StrokeThickness="0"
-					Padding="13"
-					StrokeShape="RoundRectangle 13">
+							StrokeThickness="0"
+							Padding="13"
+							StrokeShape="RoundRectangle 13">
 						<VerticalStackLayout Spacing="5">
 							<Label Text="POWÓD ZGŁOSZENIA"
-							FontSize="9"
-							CharacterSpacing="1"
-							TextColor="#B77C4A" />
+								   FontSize="9"
+								   CharacterSpacing="1"
+								   TextColor="#B77C4A"/>
 							<Label Text="Spam"
-							FontSize="13"
-							FontAttributes="Bold"
-							TextColor="#192D45" />
+								   FontSize="13"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="Powtarzające się treści reklamowe w publikacji."
-							FontSize="11"
-							TextColor="#73869A" />
+								   FontSize="11"
+								   TextColor="#73869A"/>
 						</VerticalStackLayout>
 					</Border>
 					<Grid ColumnDefinitions="Auto,*"
-					ColumnSpacing="11">
+						  ColumnSpacing="11">
 						<Border BackgroundColor="#EAF3FA"
-						StrokeThickness="0"
-						WidthRequest="76"
-						HeightRequest="76"
-						StrokeShape="RoundRectangle 13">
+								StrokeThickness="0"
+								WidthRequest="76"
+								HeightRequest="76"
+								StrokeShape="RoundRectangle 13">
 							<Label Text="📷"
-							FontSize="29"
-							HorizontalOptions="Center"
-							VerticalOptions="Center" />
+								   FontSize="29"
+								   HorizontalOptions="Center"
+								   VerticalOptions="Center"/>
 						</Border>
 						<VerticalStackLayout Grid.Column="1"
-Spacing="5"
-VerticalOptions="Center">
+											 Spacing="5"
+											 VerticalOptions="Center">
 							<Label Text="Zgłoszona publikacja"
-							FontSize="12"
-							FontAttributes="Bold"
-							TextColor="#192D45" />
+								   FontSize="12"
+								   FontAttributes="Bold"
+								   TextColor="#192D45"/>
 							<Label Text="Post użytkownika Michał"
-							FontSize="11"
-							TextColor="#73869A" />
+								   FontSize="11"
+								   TextColor="#73869A"/>
 							<Label Text="ID publikacji: POST-002"
-							FontSize="10"
-							TextColor="#A1B3C3" />
+								   FontSize="10"
+								   TextColor="#A1B3C3"/>
 						</VerticalStackLayout>
 					</Grid>
 					<BoxView HeightRequest="1"
-					Color="#EAF0F5" />
+							 Color="#EAF0F5"/>
 					<Button Text="Zobacz post"
-					FontSize="12"
-					FontAttributes="Bold"
-					TextColor="#187BA8"
-					BackgroundColor="#E4F5FD"
-					CornerRadius="11"
-					HeightRequest="43" />
+							FontSize="12"
+							FontAttributes="Bold"
+							TextColor="#187BA8"
+							BackgroundColor="#E4F5FD"
+							CornerRadius="11"
+							HeightRequest="43"/>
 					<Grid ColumnDefinitions="*,*"
-					ColumnSpacing="10">
+						  ColumnSpacing="10">
 						<Button Text="Usuń treść"
-						FontSize="12"
-						TextColor="White"
-						BackgroundColor="#C96B6B"
-						CornerRadius="11"
-						HeightRequest="43" />
+								FontSize="12"
+								TextColor="White"
+								BackgroundColor="#C96B6B"
+								CornerRadius="11"
+								HeightRequest="43"/>
 						<Button Grid.Column="1"
-						Text="Odrzuć zgłoszenie"
-						FontSize="12"
-					    TextColor="#32966A"
-						BackgroundColor="#E7F7EF"
-						CornerRadius="11"
-						HeightRequest="43" />
+								Text="Odrzuć zgłoszenie"
+								FontSize="12"
+								TextColor="#32966A"
+								BackgroundColor="#E7F7EF"
+								CornerRadius="11"
+								HeightRequest="43"/>
 					</Grid>
 				</VerticalStackLayout>
 			</Border>
 			<!-- Informacja -->
 			<Border BackgroundColor="#E4F5FD"
-			StrokeThickness="0"
-			Padding="15"
-			StrokeShape="RoundRectangle 15">
+					StrokeThickness="0"
+					Padding="15"
+					StrokeShape="RoundRectangle 15">
 				<Label Text="Pamiętaj: każde zgłoszenie powinno zostać sprawdzone przed podjęciem
 decyzji moderacyjnej."
-				FontSize="11"
-				TextColor="#187BA8"
-				HorizontalTextAlignment="Center" />
+					   FontSize="11"
+					   TextColor="#187BA8"
+					   HorizontalTextAlignment="Center"/>
 			</Border>
 			<!-- Stopka -->
 			<Label Text="LOCALVIBE ADMIN PANEL"
-			FontSize="10"
-			CharacterSpacing="2"
-			TextColor="#A1B3C3"
-			HorizontalTextAlignment="Center"
-			Margin="0,5,0,0" />
+				   FontSize="10"
+				   CharacterSpacing="2"
+				   TextColor="#A1B3C3"
+				   HorizontalTextAlignment="Center"
+				   Margin="0,5,0,0"/>
 		</VerticalStackLayout>
 	</ScrollView>
 </ContentPage>

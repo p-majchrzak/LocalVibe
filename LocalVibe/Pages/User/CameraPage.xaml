@@ -1,341 +1,200 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="LocalVibe.Pages.User.CameraPage"
-BackgroundColor="#F5F8FF"
-Shell.NavBarIsVisible="False"
-NavigationPage.HasNavigationBar="False">
-<ScrollView>
-<VerticalStackLayout
-Padding="22,25,22,30"
-Spacing="22">
-<!-- Naglowek -->
-<Grid ColumnDefinitions="*,Auto"
-VerticalOptions="Center">
-<VerticalStackLayout Spacing="3">
-<Label Text="localvibe"
-FontSize="25"
-FontAttributes="Bold"
-TextColor="#187BA8"
-CharacterSpacing="-0.7" />
-<Label Text="UCHWYC SWOJ MOMENT"
-FontSize="9"
-CharacterSpacing="2"
-TextColor="#8CA1B4" />
-</VerticalStackLayout>
-<Border Grid.Column="1"
-BackgroundColor="#E4F5FD"
-StrokeThickness="0"
-Padding="12"
-StrokeShape="RoundRectangle 16"
-VerticalOptions="Center">
-<Label Text="" 
-FontSize="22"
-HorizontalOptions="Center"
-VerticalOptions="Center" />
-</Border>
-</Grid>
-<!-- Tytul -->
-<VerticalStackLayout Spacing="6">
-<Label Text="Twój moment."
-FontSize="30"
-FontAttributes="Bold"
-TextColor="#192D45" />
-<Label Text="Podziel się chwilą ze swojego świata."
-FontSize="14"
-TextColor="#73869A" />
-</VerticalStackLayout>
-<!-- Informacje o pogodzie i lokalizacji -->
-<Grid ColumnDefinitions="*,*"
-ColumnSpacing="12">
-<Border BackgroundColor="White"
-Stroke="#DDEBF5"
-StrokeThickness="1"
-Padding="15"
-StrokeShape="RoundRectangle 18">
-<VerticalStackLayout Spacing="8">
-<Label Text="POGODA"
-FontSize="10"
-CharacterSpacing="1.5"
-TextColor="#8CA1B4" />
-<Label Text="-- °C"
-FontSize="20"
-FontAttributes="Bold"
-TextColor="#187BA8" />
-<Label Text="Brak danych"
-FontSize="11"
-TextColor="#8CA1B4" />
-</VerticalStackLayout>
-</Border>
-<Border Grid.Column="1"
-BackgroundColor="White"
-Stroke="#DDEBF5"
-StrokeThickness="1"
-Padding="15"
-StrokeShape="RoundRectangle 18">
-<VerticalStackLayout Spacing="8">
-<Label Text="LOKALIZACJA"
-FontSize="10"
-CharacterSpacing="1.5"
-TextColor="#8CA1B4" />
-<Label Text="+ Nieznana"
-FontSize="18"
-FontAttributes="Bold"
-TextColor="#187BA8" />
-<Label Text="Brak danych"
-FontSize="11"
-TextColor="#8CA1B4" />
-</VerticalStackLayout>
-</Border>
-</Grid>
-<!-- Podglad aparatu -->
-<VerticalStackLayout Spacing="12">
-<Grid ColumnDefinitions="*, Auto">
-<Label Text="Podgląd aparatu"
-FontSize="17"
-FontAttributes="Bold"
-TextColor="#192D45"
-VerticalOptions="Center" />
-<Border Grid.Column="1"
-BackgroundColor="#E4F5FD"
-StrokeThickness="0"
-Padding="10,5"
-StrokeShape="RoundRectangle 10">
-<Label Text="GOTOWY"
-FontSize="9"
-FontAttributes="Bold"
-TextColor="#187BA8" />
-</Border>
-</Grid>
-<Border BackgroundColor="#EAF3FA"
-Stroke="#D5E7F3"
-StrokeThickness="1"
-StrokeShape="RoundRectangle 24"
-HeightRequest="390">
-<Grid RowDefinitions="*, Auto,*"
-Padding="20">
-<VerticalStackLayout Grid.Row="1"
-Spacing="12"
-HorizontalOptions="Center"
-VerticalOptions="Center">
-<Border BackgroundColor="#FFFFFF"
-StrokeThickness="0"
-StrokeShape="RoundRectangle 25"
-Padding="20"
-HorizontalOptions="Center">
-<Label Text=""
-FontSize="42"
-HorizontalOptions="Center"
-VerticalOptions="Center" />
-</Border>
-<Label Text="Podgląd aparatu"
-FontSize="18"
-FontAttributes="Bold"
-TextColor="#187BA8"
-HorizontalTextAlignment="Center" />
-<Label Text="Tutaj pojawi się obraz z kamery."
-FontSize="12"
-TextColor="#8CA1B4"
-HorizontalTextAlignment="Center" />
-</VerticalStackLayout>
-</Grid>
-</Border>
-</VerticalStackLayout>
-<!-- Przyciski -->
-<VerticalStackLayout Spacing="12">
-<Button Text="Zrób zdjęcie"
-FontSize="15"
-FontAttributes="Bold"
-TextColor="White"
-BackgroundColor="#187BA8"
-CornerRadius="16"
-HeightRequest="56" />
-<Button Text="Wybierz zdjęcie z galerii"
-FontSize="14"
-FontAttributes="Bold"
-TextColor="#187BA8"
-BackgroundColor="#E4F5FD"
-CornerRadius="16"
-HeightRequest="52" />
-</VerticalStackLayout>
-<!-- Informacja -->
-<Label Text="MOMENTS, NOT PERFECTION"
-FontSize="10"
-CharacterSpacing="2"
-TextColor="#A1B3C3"
-HorizontalTextAlignment="Center"
-Margin="0,5,0,0" />
-</VerticalStackLayout>
-</ScrollView>
-</ContentPage><?xml version="1.0" encoding="utf-8"?>
-<ContentPage
-xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="LocalVibe.Pages.User.CameraPage"
-BackgroundColor="#F5F8FF"
-Shell.NavBarIsVisible="False"
-NavigationPage.HasNavigationBar="False">
-<ScrollView>
-<VerticalStackLayout
-Padding="22,25,22,30"
-Spacing="22">
-<!-- Naglowek -->
-<Grid ColumnDefinitions="*,Auto"
-VerticalOptions="Center">
-<VerticalStackLayout Spacing="3">
-<Label Text="localvibe"
-FontSize="25"
-FontAttributes="Bold"
-TextColor="#187BA8"
-CharacterSpacing="-0.7" />
-<Label Text="UCHWYC SWOJ MOMENT"
-FontSize="9"
-CharacterSpacing="2"
-TextColor="#8CA1B4" />
-</VerticalStackLayout>
-<Border Grid.Column="1"
-BackgroundColor="#E4F5FD"
-StrokeThickness="0"
-Padding="12"
-StrokeShape="RoundRectangle 16"
-VerticalOptions="Center">
-<Label Text="" 
-FontSize="22"
-HorizontalOptions="Center"
-VerticalOptions="Center" />
-</Border>
-</Grid>
-<!-- Tytul -->
-<VerticalStackLayout Spacing="6">
-<Label Text="Twój moment."
-FontSize="30"
-FontAttributes="Bold"
-TextColor="#192D45" />
-<Label Text="Podziel się chwilą ze swojego świata."
-FontSize="14"
-TextColor="#73869A" />
-</VerticalStackLayout>
-<!-- Informacje o pogodzie i lokalizacji -->
-<Grid ColumnDefinitions="*,*"
-ColumnSpacing="12">
-<Border BackgroundColor="White"
-Stroke="#DDEBF5"
-StrokeThickness="1"
-Padding="15"
-StrokeShape="RoundRectangle 18">
-<VerticalStackLayout Spacing="8">
-<Label Text="POGODA"
-FontSize="10"
-CharacterSpacing="1.5"
-TextColor="#8CA1B4" />
-<Label Text="-- °C"
-FontSize="20"
-FontAttributes="Bold"
-TextColor="#187BA8" />
-<Label Text="Brak danych"
-FontSize="11"
-TextColor="#8CA1B4" />
-</VerticalStackLayout>
-</Border>
-<Border Grid.Column="1"
-BackgroundColor="White"
-Stroke="#DDEBF5"
-StrokeThickness="1"
-Padding="15"
-StrokeShape="RoundRectangle 18">
-<VerticalStackLayout Spacing="8">
-<Label Text="LOKALIZACJA"
-FontSize="10"
-CharacterSpacing="1.5"
-TextColor="#8CA1B4" />
-<Label Text="+ Nieznana"
-FontSize="18"
-FontAttributes="Bold"
-TextColor="#187BA8" />
-<Label Text="Brak danych"
-FontSize="11"
-TextColor="#8CA1B4" />
-</VerticalStackLayout>
-</Border>
-</Grid>
-<!-- Podglad aparatu -->
-<VerticalStackLayout Spacing="12">
-<Grid ColumnDefinitions="*, Auto">
-<Label Text="Podgląd aparatu"
-FontSize="17"
-FontAttributes="Bold"
-TextColor="#192D45"
-VerticalOptions="Center" />
-<Border Grid.Column="1"
-BackgroundColor="#E4F5FD"
-StrokeThickness="0"
-Padding="10,5"
-StrokeShape="RoundRectangle 10">
-<Label Text="GOTOWY"
-FontSize="9"
-FontAttributes="Bold"
-TextColor="#187BA8" />
-</Border>
-</Grid>
-<Border BackgroundColor="#EAF3FA"
-Stroke="#D5E7F3"
-StrokeThickness="1"
-StrokeShape="RoundRectangle 24"
-HeightRequest="390">
-<Grid RowDefinitions="*, Auto,*"
-Padding="20">
-<VerticalStackLayout Grid.Row="1"
-Spacing="12"
-HorizontalOptions="Center"
-VerticalOptions="Center">
-<Border BackgroundColor="#FFFFFF"
-StrokeThickness="0"
-StrokeShape="RoundRectangle 25"
-Padding="20"
-HorizontalOptions="Center">
-<Label Text=""
-FontSize="42"
-HorizontalOptions="Center"
-VerticalOptions="Center" />
-</Border>
-<Label Text="Podgląd aparatu"
-FontSize="18"
-FontAttributes="Bold"
-TextColor="#187BA8"
-HorizontalTextAlignment="Center" />
-<Label Text="Tutaj pojawi się obraz z kamery."
-FontSize="12"
-TextColor="#8CA1B4"
-HorizontalTextAlignment="Center" />
-</VerticalStackLayout>
-</Grid>
-</Border>
-</VerticalStackLayout>
-<!-- Przyciski -->
-<VerticalStackLayout Spacing="12">
-<Button Text="Zrób zdjęcie"
-FontSize="15"
-FontAttributes="Bold"
-TextColor="White"
-BackgroundColor="#187BA8"
-CornerRadius="16"
-HeightRequest="56" />
-<Button Text="Wybierz zdjęcie z galerii"
-FontSize="14"
-FontAttributes="Bold"
-TextColor="#187BA8"
-BackgroundColor="#E4F5FD"
-CornerRadius="16"
-HeightRequest="52" />
-</VerticalStackLayout>
-<!-- Informacja -->
-<Label Text="MOMENTS, NOT PERFECTION"
-FontSize="10"
-CharacterSpacing="2"
-TextColor="#A1B3C3"
-HorizontalTextAlignment="Center"
-Margin="0,5,0,0" />
-</VerticalStackLayout>
-</ScrollView>
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="LocalVibe.Pages.User.CameraPage"
+    BackgroundColor="#F5F8FF"
+    Shell.NavBarIsVisible="False"
+    NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="22,35,22,30"
+            Spacing="22">
+
+            <!-- HEADER -->
+            <VerticalStackLayout Spacing="2">
+                <Label
+                    Text="localvibe"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    TextColor="#187BA8" />
+
+                <Label
+                    Text="UCHWYĆ SWÓJ MOMENT"
+                    FontSize="10"
+                    CharacterSpacing="2"
+                    TextColor="#8CA1B4" />
+            </VerticalStackLayout>
+
+            <!-- TITLE -->
+            <VerticalStackLayout Spacing="5">
+                <Label
+                    Text="Twój moment."
+                    FontSize="29"
+                    FontAttributes="Bold"
+                    TextColor="#192D45" />
+
+                <Label
+                    Text="Pokaż innym, jak wygląda Twój dzień."
+                    FontSize="14"
+                    TextColor="#73869A" />
+            </VerticalStackLayout>
+
+            <!-- WEATHER AND LOCATION -->
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="12">
+
+                <Border
+                    Grid.Column="0"
+                    BackgroundColor="White"
+                    Stroke="#DDEBF5"
+                    StrokeThickness="1"
+                    Padding="15"
+                    StrokeShape="RoundRectangle 18">
+
+                    <VerticalStackLayout Spacing="5">
+                        <Label
+                            Text="POGODA"
+                            FontSize="10"
+                            CharacterSpacing="1"
+                            TextColor="#8CA1B4" />
+
+                        <Label
+                            Text="-- °C"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            TextColor="#187BA8" />
+
+                        <Label
+                            Text="Brak danych"
+                            FontSize="12"
+                            TextColor="#73869A" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    Stroke="#DDEBF5"
+                    StrokeThickness="1"
+                    Padding="15"
+                    StrokeShape="RoundRectangle 18">
+
+                    <VerticalStackLayout Spacing="5">
+                        <Label
+                            Text="LOKALIZACJA"
+                            FontSize="10"
+                            CharacterSpacing="1"
+                            TextColor="#8CA1B4" />
+
+                        <Label
+                            Text="Nieznana"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            TextColor="#187BA8" />
+
+                        <Label
+                            Text="Brak danych"
+                            FontSize="12"
+                            TextColor="#73869A" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+            <!-- CAMERA PREVIEW -->
+            <Border
+                BackgroundColor="#EAF4FC"
+                Stroke="#DDEBF5"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 24"
+                HeightRequest="390">
+
+                <VerticalStackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Spacing="14">
+
+                    <Border
+                        BackgroundColor="#FFFFFF"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 30"
+                        WidthRequest="76"
+                        HeightRequest="76"
+                        HorizontalOptions="Center">
+
+                        <Label
+                            Text="📷"
+                            FontSize="35"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                    </Border>
+
+                    <Label
+                        Text="Podgląd aparatu"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#187BA8"
+                        HorizontalTextAlignment="Center" />
+
+                    <Label
+                        Text="Tutaj pojawi się obraz z aparatu"
+                        FontSize="12"
+                        TextColor="#73869A"
+                        HorizontalTextAlignment="Center" />
+
+                    <Border
+                        BackgroundColor="#E7F7EF"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="13,6">
+
+                        <Label
+                            Text="●  GOTOWY"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            TextColor="#32966A" />
+                    </Border>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- BUTTONS -->
+            <VerticalStackLayout Spacing="12">
+
+                <Button
+                    Text="Zrób zdjęcie"
+                    HeightRequest="55"
+                    BackgroundColor="#4EB9E6"
+                    TextColor="White"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    CornerRadius="16" />
+
+                <Button
+                    Text="Wybierz zdjęcie z galerii"
+                    HeightRequest="53"
+                    BackgroundColor="White"
+                    TextColor="#187BA8"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    BorderColor="#DDEBF5"
+                    BorderWidth="1"
+                    CornerRadius="16" />
+
+            </VerticalStackLayout>
+
+            <!-- FOOTER -->
+            <Label
+                Text="MOMENTS, NOT PERFECTION"
+                FontSize="10"
+                CharacterSpacing="2"
+                TextColor="#A1B3C3"
+                HorizontalTextAlignment="Center"
+                Margin="0,8,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
