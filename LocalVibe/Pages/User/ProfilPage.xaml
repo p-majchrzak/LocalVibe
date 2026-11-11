@@ -1,12 +1,275 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LocalVibe.Pages.User.ProfilPage"
-             Title="ProfilPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Strona profilu uzytkownika"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="LocalVibe.Pages.User.ProfilPage"
+    BackgroundColor="#F5F8FF"
+    Shell.NavBarIsVisible="False"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="22,35,22,30"
+            Spacing="22">
+            <!-- HEADER -->
+            <VerticalStackLayout Spacing="2">
+                <Label
+                    Text="localvibe"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    TextColor="#187BA8" />
+                <Label
+                    Text="YOUR WORLD, YOUR VIBE"
+                    FontSize="10"
+                    CharacterSpacing="2"
+                    TextColor="#8CA1B4" />
+            </VerticalStackLayout>
+            <!--TITLE-->
+            <Label
+                Text="Twój profil."
+                FontSize="29"
+                FontAttributes="Bold"
+                TextColor="#192D45" />
+            <!-- PROFILE CARD -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#DDEBF5"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 22"
+                Padding="20">
+                <VerticalStackLayout Spacing="15">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                        <Border
+                            WidthRequest="88"
+                            HeightRequest="88"
+                            BackgroundColor="#EAF4FC"
+                            Stroke="#DDEBF5"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 44"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="📷"
+                                FontSize="42"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center" />
+                        </Border>
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            Spacing="5">
+                            <Label
+                                Text="Piotr Majchrzak"
+                                FontSize="19"
+                                FontAttributes="Bold"
+                                TextColor="#192D45" />
+                            <Label
+                                Text="@piotr"
+                                FontSize="13"
+                                TextColor="#73869A" />
+                            <Border
+                                BackgroundColor="#E7F7EF"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 10"
+                                Padding="9,5"
+                                HorizontalOptions="Start">
+                                <Label
+                                    Text="AKTYWNY"
+                                    FontSize="9"
+                                    FontAttributes="Bold"
+                                    TextColor="#32966A" />
+                            </Border>
+                        </VerticalStackLayout>
+                    </Grid>
+                    <Label
+                        Text="Łapię chwile i dzielę się swoim światem."
+                        FontSize="13"
+                        TextColor="#73869A" />
+                    <Label
+                        Text="📍 Polska"
+                        FontSize="12"
+                        TextColor="#8CA1B4" />
+                    <Button
+                        Text="Edytuj profil"
+                        HeightRequest="46"
+                        BackgroundColor="#EAF4FC"
+                        TextColor="#187BA8"
+                        FontSize="13"
+                        FontAttributes="Bold"
+                        CornerRadius="13"
+                        BorderWidth="0" />
+                </VerticalStackLayout>
+            </Border>
+            <!--STATISTICS -->
+            <Grid
+                ColumnDefinitions="*,*,*"
+                ColumnSpacing="10">
+                <Border
+                    Grid.Column="0"
+                    BackgroundColor="White"
+                    Stroke="#DDEBF5"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 17"
+                    Padding="8,15">
+                    <VerticalStackLayout Spacing="4">
+                        <Label
+                            Text="24"
+                            FontSize="23"
+                            FontAttributes="Bold"
+                            TextColor="#187BA8"
+                            HorizontalTextAlignment="Center" />
+                        <Label
+                            Text="Posty"
+                            FontSize="11"
+                            TextColor="#73869A"
+                            HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    Stroke="#DDEBF5"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 17"
+                    Padding="8,15">
+                    <VerticalStackLayout Spacing="4">
+                        <Label
+                            Text="156"
+                            FontSize="23"
+                            FontAttributes="Bold"
+                            TextColor="#187BA8"
+                            HorizontalTextAlignment="Center" />
+                        <Label
+                            Text="Obserwujący"
+                            FontSize="11"
+                            TextColor="#73869A"
+                            HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    Stroke="#DDEBF5"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 17"
+                    Padding="8,15">
+                    <VerticalStackLayout Spacing="4">
+                        <Label
+                            Text="89"
+                            FontSize="23"
+                            FontAttributes="Bold"
+                            TextColor="#187BA8"
+                            HorizontalTextAlignment="Center" />
+                        <Label
+                            Text="Obserwowani"
+                            FontSize="11"
+                            TextColor="#73869A"
+                            HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+            <!-- POSTS HEADER -->
+            <Grid ColumnDefinitions="*,Auto">
+                <Label
+                    Text="Twoje publikacje"
+                    FontSize="19"
+                    FontAttributes="Bold"
+                    TextColor="#192D45"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Column="1"
+                    Text="WSZYSTKIE"
+                    FontSize="10"
+                    CharacterSpacing="1"
+                    FontAttributes="Bold"
+                    TextColor="#4EB9E6"
+                    VerticalOptions="Center" />
+            </Grid>
+            <!--POSTS GRID -->
+            <Grid
+                ColumnDefinitions="*,*,*"
+                RowDefinitions="120,120"
+                ColumnSpacing="8"
+                RowSpacing="8">
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="#DCEFFA"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 15">
+                    <Label
+                        Text=""
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Border>
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="#E8E1F8"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 15">
+                    <Label
+                        Text=""
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Border>
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    BackgroundColor="#DDF3E9"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 15">
+                    <Label
+                        Text=""
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    BackgroundColor="#FCE9DF"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 15">
+                    <Label
+                        Text=""
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="#E2EAF8"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 15">
+                    <Label
+                        Text=""
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    BackgroundColor="#F5E8F2"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 15">
+                    <Label
+                        Text=""
+                        FontSize="35"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Border>
+            </Grid>
+            <!-- FOOTER -->
+            <Label
+                Text="MOMENTS, NOT PERFECTION"
+                FontSize="10"
+                CharacterSpacing="2"
+                TextColor="#A1B3C3"
+                HorizontalTextAlignment="Center"
+                Margin="0,8,0,0" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
