@@ -321,7 +321,8 @@
                     FontAttributes="Bold"
                     CornerRadius="16"
                     BorderWidth="1"
-                    BorderColor="#F3DADA" />
+                    BorderColor="#F3DADA" 
+                    Clicked="LogoutButton"/>
                 <Label
                     Text="Po wylogowaniu konieczne będzie ponowne zalogowanie."
                     FontSize="11"

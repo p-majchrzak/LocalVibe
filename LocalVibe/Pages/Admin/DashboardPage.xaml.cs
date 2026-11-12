@@ -7,4 +7,8 @@ public partial class DashboardPage : ContentPage
 	{
 		InitializeComponent();
 	}
+	private async void LogoutButton(object sender, EventArgs e)
+    {
+         Application.Current!.Windows[0].Page = new Shared.MainPage();
+    }
 }

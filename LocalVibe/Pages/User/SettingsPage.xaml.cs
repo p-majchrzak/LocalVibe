@@ -7,4 +7,9 @@ public partial class SettingsPage : ContentPage
 	{
 		InitializeComponent();
 	}
+	private async void LogoutButton(object sender, EventArgs e)
+    {
+         Application.Current!.Windows[0].Page = new Shared.MainPage();
+    }
+
 }

@@ -489,6 +489,24 @@
 					</VerticalStackLayout>
 				</Border>
 			</VerticalStackLayout>
+			<VerticalStackLayout Spacing="10">
+                <Button
+                    Text="Wyloguj się"
+                    HeightRequest="54"
+                    BackgroundColor="#FFF0F0"
+                    TextColor="#C45E5E"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    CornerRadius="16"
+                    BorderWidth="1"
+                    BorderColor="#F3DADA" 
+                    Clicked="LogoutButton"/>
+                <Label
+                    Text="Po wylogowaniu konieczne będzie ponowne zalogowanie."
+                    FontSize="11"
+                    TextColor="#8CA1B4"
+                    HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
 			<!-- Stopka -->
 			<Label Text="LOCALVIBE ADMIN PANEL"
 				   FontSize="10"
